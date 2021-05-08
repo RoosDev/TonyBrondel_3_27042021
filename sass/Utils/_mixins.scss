@@ -1,0 +1,56 @@
+@mixin flexsimple($sens, $alalligne, $alignH, $alignV){
+display: flex;
+flex-flow: $sens $alalligne ;
+justify-content: $alignH;
+align-items: $alignV;
+
+}
+
+
+@mixin boutonetape($couleurfond, $opacite) {
+    width: 350px;
+    height: 60px;
+    margin: 20px auto 20px auto;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px $Color_Gris_Dark;
+    background-color: rgba($couleurfond, $opacite);
+    @include flexsimple(row, nowrap, flex-start, center);
+ 
+}
+
+/** maps + mixin pour les icones awesome*/
+
+@mixin coloriconawesome($coloricone, $taillebox){
+    display: inline-block;
+    width: $taillebox;
+    height: $taillebox;
+    color: $coloricone;
+    line-height: $taillebox;
+}
+
+
+/*   Mixin pour la mise en forme des cards  */
+
+
+
+
+/**** Les mixin des media queries ****/
+
+@mixin mobile-only{
+    @media (max-width:map-get($breakpoint , mobile )){
+        @content
+    }
+};
+
+@mixin tablet-only{
+    @media (max-width:map-get($breakpoint , tablet )){
+        @content
+    }
+};
+
+@mixin smallscreen{
+    @media screen and (max-width:map-get($breakpoint , laptop )){
+        @content
+    }
+};

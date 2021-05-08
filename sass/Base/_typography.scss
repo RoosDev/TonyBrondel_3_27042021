@@ -1,0 +1,82 @@
+/*  Déclaration des Polices */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../../fonts/Shrikhand/Shrikhand-Regular.ttf');
+    font-weight: bolder;
+}
+
+/* Style globaux  */
+
+*{
+    font-family: 'Roboto','Lucida Regular', Verdana, sans-serif;
+    color: $Color_Marque;
+}
+
+p{
+	font-size: 0.9em;
+    text-align: justify;
+    
+}
+
+
+/******  Mise en forme du H1 c'est le titre du site ******/
+
+h1{ 
+    font-family: 'Shrikhand';
+    font-size: 1.5em;
+    font-style: italic;
+
+}
+
+
+
+/******  Mise en forme du H2 c'est le titre du site ******/
+
+
+h2{
+    font-size: 1.3em;
+  
+}
+
+
+/******  Mise en forme du H3 dans une box aside fond gris foncé et tout en majuscule ******/
+
+h3{
+    font-size: 1.1em;
+
+}
+
+/******  Mise en forme du H4 dans une block - fond orange clair ******/
+
+h4{
+    font-size: 0.9em;
+
+}
+
+
+
+
+/******  Mise en forme des liens ******/
+
+
+a{
+    color: $Color_Marque;
+    text-decoration: none;
+    margin: auto;
+
+    &:hover{
+        color: $Color_Marque;
+        text-decoration: none;
+    }
+
+}
+
+

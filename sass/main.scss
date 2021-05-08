@@ -1,0 +1,30 @@
+/*** 1 - Import des variables, fonctions et compagnie (Utils)***/
+@import "./Utils/variables.scss";
+@import "./Utils/extensions.scss";
+@import "./Utils/placeholder.scss";
+@import "./Utils/functions.scss";
+@import "./Utils/mixins.scss";
+
+/*** 2 - Import des feuilles de style Tiers (Vendors) ***/
+
+/*** 3 - Import des base (Base) ***/
+@import "./Base/typography.scss";
+@import "./Base/mediaqueries.scss";
+
+/*** 4 - Import des composants (Composants)***/
+@import "./Composants/buttons.scss";
+
+/*** 5 - Import des layout (Layout)***/
+@import "./Layout/header.scss";
+@import "./Layout/aside.scss";
+@import "./Layout/main.scss";
+@import "./Layout/footer.scss";
+
+/*** 5 - Import des pages (Pages)***/
+
+@import "./Pages/home.scss";
+@import "./Pages/fiche.scss";
+
+
+/*** 5 - Import des Thèmes particuliers (Themes) ***/
+

@@ -1,0 +1,105 @@
+aside{
+width: 100%;
+margin: 0px;
+
+}
+
+    .aside__motivation{
+        width: 100%;
+        margin: auto;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: $Color_Gris_Superlight;
+
+    }
+
+        .aside__motivation__slogan{
+            margin : 15px auto 5px auto;
+            display: flex;
+
+        }
+
+        .aside__motivation__slogan h2{
+            margin: auto;
+            text-align: center;
+
+        }
+
+
+
+        .aside__motivation__detail{
+            margin : 15px auto 5px auto;
+            display: flex;
+
+        }
+
+        .aside__motivation__detail p{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+
+        }
+
+
+        .aside__motivation__button{
+            width: 100%;
+            margin: 25px auto 50px auto;
+            text-align: center;
+        }
+
+        
+
+            button{
+                @extend %__wouahoubouton;
+            }
+    
+    
+    #aside__Fonctionnement{
+        width: 100%;
+        margin : 50px auto 50px auto;
+    }
+        .aside__Fonctionnement__title h2{
+            margin-left : 30px;
+
+        }
+    
+        .aside__Fonctionnement__etapes{
+            width: 90%;
+            margin: auto;
+        }
+
+        .aside__etapes__no1, .aside__etapes__no2{
+            @include boutonetape(#fff, 1);
+        }   
+        .aside__etapes__no3{
+                @include boutonetape($Color_Marque_Primaire, 0.2);
+            }
+
+            .aside__etapes__number{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                margin: auto 10px auto -10px;
+
+                p{
+                    @extend .pucenumero;
+                    
+                }
+            }
+
+            .aside__etapes__icone1 i, .aside__etapes__icone2 i{
+                @include coloriconawesome(rgb(128, 128, 128), 20px);
+                margin: auto 15px auto 15px;
+            }
+
+
+            .aside__etapes__icone3 i{
+                @include coloriconawesome($Color_Marque_Primaire, 20px);
+                margin: auto 15px auto 15px;
+            }
+
+            .aside__etapes__text p{
+                font-weight: bolder;
+            }
