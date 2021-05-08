@@ -1,0 +1,19 @@
+footer{
+    @include positionzone($Color_Gris_VeryDark);
+       
+}
+
+    .footer__links__title h1{
+        color: #fff;
+
+    }
+
+        li{
+            list-style-type: none;
+            
+        }
+            
+            span[class*="footer__links"] a, span[class*="footer__links"]i {
+                color: #fff;
+
+            }

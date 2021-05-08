@@ -1,12 +1,14 @@
+/***************************************************************/
+/***         Le CSS du aside    ----    Fonctionnement        **/
+/***************************************************************/
+
 aside{
-width: 100%;
-margin: 0px;
+    @include positionzone(#fff);
 
 }
 
     .aside__motivation{
         width: 100%;
-        margin: auto;
         margin: auto;
         display: flex;
         flex-flow: column nowrap;
