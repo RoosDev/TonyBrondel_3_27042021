@@ -2,6 +2,7 @@
 body{
     @include flexsimple(column, nowrap, flex-start, flex-start);
     margin: 0px;
+    animation: siteload 0s 3s both;
 }
 
 /***************************************************************/
