@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet Ohmyfood site de commande",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./cssprefixer/"
+  },
+  "author": "Tony Brondel",
+  "license": "ISC",
+  "browserslist": "last 5 versions"
+}
