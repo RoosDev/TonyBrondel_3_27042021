@@ -8,14 +8,20 @@ main{
     @include positionzone($Color_Gris_light);
 }
     .main__title h2{
-        margin-left : 30px;
+        @extend %__titlepart;
 
     }
 
     .main__card{
         @extend .cartedimension;
         @include flexsimple(column, nowrap, flex-end, flex-start);
-    }
+        transform: scale(1);
+        transition: transform 200ms;
+        &:hover, :focus{
+            transform: scale(1.08);
+
+            }
+        }
         .card__header1{
              @include headercard(lapalettedugout);
         }
@@ -54,9 +60,59 @@ main{
 
                 i{
                     line-height: 100%;
-
                 }
+                    
+                .fas{
+                transform-origin: center center;
+                transform: scale(0);
+                transition: all 450ms;
+                    &:hover, :focus, :active{
+                        transform: scale(1);
+                    }
+                }
+                
+                .far{
+                    transform-origin: center center;
+                    transform: scale(1);
+                    transition: all 450ms;
+                    &:hover{
+                        transform: scale(0);
+                    }
+                }
+            
+
+
+
             }
 
 
         }
+
+        .card__header_new{
+            width : 90px;
+            height: 30px;
+            margin-right: 15px;
+
+        
+            .Pnew1{
+                @include flagnewrestaurant(new);
+            
+            }
+
+            .Pnew2{
+                @include flagnewrestaurant(new);
+            
+            }
+
+            .Pnew3{
+                @include flagnewrestaurant(notnew);
+            
+            }
+
+            .Pnew4{
+                @include flagnewrestaurant(notnew);
+            
+            }
+    }
+
+

@@ -4,16 +4,24 @@ footer{
 }
 
     .footer__links__title h1{
-        color: #fff;
+        color:#fff;
+        @extend %__titlepart;
+    }
 
+    ul{
+        margin : 0px 0px 30px 0px;
     }
 
         li{
             list-style-type: none;
-            
+            margin : 5px auto 5px 0px;
         }
             
-            span[class*="footer__links"] a, span[class*="footer__links"]i {
+            span[class*="footer__links"] a, span[class*="footer__links"] i{
                 color: #fff;
 
+            }
+
+            .footer__links__icone{
+                @include coloriconawesome (#fff,20px);
             }
