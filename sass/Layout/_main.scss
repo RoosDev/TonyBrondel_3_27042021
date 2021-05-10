@@ -62,31 +62,46 @@ main{
                     line-height: 100%; 
                 }
                     
+                .fa-heart{
+                    font-size: 1.6em;
+                    cursor: pointer;
+
+                }
+
                 .fas{
                     position: absolute;
                     transform-origin: center center;
+                    background: linear-gradient($Color_Marque_Primaire, $Color_Marque_Secondaire );
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-clip: text;
                     transform: scale(0);
-                    background: linear-gradient(45%, $Color_Marque_Primaire, $Color_Marque_Secondaire );
-                    
-                    transition: all 450ms;
+                    opacity: 0;
+                    transition: all 350ms;
                         &:hover, :focus, :active{
                             transform: scale(1);
+                            opacity: 1;
                         }
                         &:hover + .far, :focus + .far, :active + .far{
                             transform: scale(0);
+                            opacity: 0;
                         }
                 }
                 
                 .far{
                     position: absolute;
                     transform-origin: center center;
-                    transform: scale(1);
-                    transition: all 450ms;
+                    transform: scale(0.9);
+                    opacity: 1;
+                    transition: all 350ms;
                     &:hover, :focus, :active{
                         transform: scale(0);
+                        opacity: 0;
                     }
                     &:hover + .fas, :focus + .fas, :active + .fas{
                         transform: scale(1);
+                        opacity: 1;
                     }
 
                 }
