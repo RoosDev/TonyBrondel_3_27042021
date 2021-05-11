@@ -3,13 +3,14 @@
 /***************************************************************/
 
 aside{
+    clear: both;
     @include positionzone(#fff);
 
 }
 
     .aside__motivation{
         width: 100%;
-        margin: auto;
+        margin: 0 auto 0 auto;
         display: flex;
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;

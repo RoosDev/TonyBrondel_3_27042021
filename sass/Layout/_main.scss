@@ -5,6 +5,7 @@
 
 
 main{
+    clear: both;
     @include positionzone($Color_Gris_light);
 }
     .main__title h2{
