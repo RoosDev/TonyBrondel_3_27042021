@@ -1,8 +1,17 @@
-header{
-    width: 100%;
-    @include flexsimple(column, nowrap, flex-start, center);
+/* Mise en forme de l'architecture globale*/
+body{
+    @include flexsimple(column, nowrap, flex-start, flex-start);
     margin: 0px;
-    background-color: $Color_Gris_light;
+}
+
+/***************************************************************/
+/***                        Le CSS du header                  **/
+/***************************************************************/
+
+header{
+    clear: both;
+    @include positionzone($Color_Gris_light);
+    @include flexsimple(column, nowrap, flex-start, center);
 }
     #header__logo{
         width: 100%;

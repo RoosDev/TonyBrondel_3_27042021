@@ -1,13 +1,16 @@
+/***************************************************************/
+/***         Le CSS du aside    ----    Fonctionnement        **/
+/***************************************************************/
+
 aside{
-width: 100%;
-margin: 0px;
+    clear: both;
+    @include positionzone(#fff);
 
 }
 
     .aside__motivation{
         width: 100%;
-        margin: auto;
-        margin: auto;
+        margin: 0 auto 0 auto;
         display: flex;
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;
@@ -60,7 +63,7 @@ margin: 0px;
         margin : 50px auto 50px auto;
     }
         .aside__Fonctionnement__title h2{
-            margin-left : 30px;
+            @extend %__titlepart;
 
         }
     
