@@ -1,15 +1,29 @@
 /*  Déclaration des Polices */
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../../fonts/Roboto/Roboto-Regular.ttf');
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
     font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: 900;
+}
+
+
+
+
+@font-face {
     font-family: 'Shrikhand';
-    src: url('../../fonts/Shrikhand/Shrikhand-Regular.ttf');
+    src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
     font-weight: bold;
 }
 
@@ -23,7 +37,7 @@
 p{
 	font-size: 0.9em;
     text-align: justify;
-    
+    text-overflow: ellipsis;
 }
 
 
@@ -31,7 +45,7 @@ p{
 
 h1{ 
     font-family: 'Shrikhand';
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-style: italic;
 
 }
@@ -42,26 +56,33 @@ h1{
 
 
 h2{
-    font-size: 1.3em;
-  
+    font-family: 'Roboto-Bold';
+    font-size: 1.4em;
+
 }
 
 
 /******  Mise en forme du H3 dans une box aside fond gris foncé et tout en majuscule ******/
 
 h3{
+    font-family: 'Roboto-Medium';
     font-size: 1.1em;
-
 }
 
 /******  Mise en forme du H4 dans une block - fond orange clair ******/
 
 h4{
-    font-size: 0.9em;
-
+    font-family: 'Roboto-Medium';
+    font-weight: 900;
+    font-size: 1.0em;
 }
 
+/******  Mise en forme du H5 roboto regular  ******/
 
+
+h5{
+    font-size: 1.1em;
+}
 
 
 /******  Mise en forme des liens ******/

@@ -6,20 +6,20 @@ aside{
     clear: both;
     @include positionzone(#fff);
     @include flexsimple(column, nowrap, flex-start, flex-start);
-    background-color: yellow;
+    z-index: 0;
 }
 
 #aside__localisation{
     width: 100%;
     margin: 0px;
     @include flexsimple(row, nowrap, flex-start, flex-start);
-    background-color: blue;
+    background-color: $Color_Gris_light;
+    
 }
 
     .aside__localisation_ico{
         @include coloriconawesome(rgb(0, 0, 0), 15px);
         margin: auto 0px auto auto;
-        background-color: red;
     }
     .aside__localisation_lieu{
         display: inline-block;
@@ -39,7 +39,8 @@ aside{
     }
 
         .aside__motivation__slogan{
-            margin : 15px auto 5px auto;
+            width: 70%;
+            margin : 25px auto 5px auto;
             display: flex;
 
         }
@@ -62,6 +63,7 @@ aside{
             width: 80%;
             margin: auto;
             text-align: center;
+            font-size: 1.1em;
 
         }
 
@@ -81,7 +83,7 @@ aside{
     
     #aside__Fonctionnement{
         width: 100%;
-        margin : 50px auto 50px auto;
+        margin : 30px auto 50px auto;
     }
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
@@ -125,5 +127,7 @@ aside{
             }
 
             .aside__etapes__text p{
+                font-family: 'Roboto-Bold';
                 font-weight: bolder;
+
             }

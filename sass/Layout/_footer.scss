@@ -7,6 +7,7 @@ footer{
     .footer__links__title h1{
         color:#fff;
         @extend %__titlepart;
+        font-size: 1.2em;
     }
 
     ul{

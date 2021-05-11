@@ -3,6 +3,7 @@
 @mixin positionzone($colorbackground){
     width: 100%;
     margin: 0px;
+    position: relative;
     background-color: $colorbackground;
 
 }
@@ -75,6 +76,23 @@ $photobackgroundheader:(
     background-position: center;
     border : 0px;
     border-radius: 20px 20px 0 0 ;
+    @include flexsimple(row, nowrap, flex-end, flex-start)
+
+}
+
+@mixin headermenu($resto){
+    $image:map-get($photobackgroundheader, $resto);
+    width: 100%;
+    min-height: 275px;
+    margin: 0px;
+    display: flex;
+    background-image: url(map-get($image, imgbckgnd));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border : 0px;
+    position: relative;
+    z-index: 0;
     @include flexsimple(row, nowrap, flex-end, flex-start)
 
 }

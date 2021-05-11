@@ -1,3 +1,128 @@
 /***************************************************************/
 /***               Le CSS de la page menu                     **/
 /***************************************************************/
+
+
+/** Mise en page général **/
+
+#containermenu{
+    @include flexsimple(column, nowrap, flex-start, flex-start);
+    margin: 0px;
+    width: 100%;
+
+    header #header__retour{
+        display: flex;
+        z-index: 10;
+    }
+}
+
+main{
+    clear: both;
+    @include positionzone($Color_Gris_light);
+    @include flexsimple(column, nowrap, flex-start,flex-start );
+
+}
+
+.menu__header{
+    @include headermenu(alafrancaise);
+}
+
+.resto__title{
+    @include positionzone($Color_Gris_light);
+    @include flexsimple(row, nowrap,space-between, center);
+
+    border: 0px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -50px;
+    z-index: 10;
+
+    h1{
+        margin : 25px auto 25px 15px;
+        font-size: 2em;
+    }
+
+    .card__description__love{
+        margin : 50px 35px auto 15px;
+        @include flexsimple(row, nowrap,flex-end, center);
+        @extend .heartislove;
+
+    }
+
+
+}
+
+/** Mise en page des blocs entrés / plats /desserts **/
+
+section{
+    @include flexsimple(column, wrap, center, center);
+    width: 100%
+}
+
+    .section__title{
+        @extend .titresectionmenu;
+    }
+
+
+/** Mise en page et mise en forme de chaque produit **/
+
+    article{
+        width: 90%;
+        height: 75px;
+        margin : 15px auto 15px auto;
+        align-self: center;
+        @include flexsimple(row, nowrap, center, flex-end);
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 3px 3px 5px rgba($Color_Gris_Dark,0.3);
+
+        .article__text{
+            h4{
+                margin : 15px auto 3px 15px;
+             }
+    
+            p{
+                margin: 2px auto 15px 15px;
+                
+            }
+
+
+            h4, p{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+                width: 100%;
+                height: 20px;
+            }
+                        
+        }
+
+        .article__text{
+            width: 85%;
+            @include flexsimple(column, nowrap, flex-start, flex-start);
+
+        }
+        .article__price{
+            width: 10%;
+            @include flexsimple(column, nowrap, flex-end, flex-end);
+            margin-right: 15px;
+            margin-left: 15px;
+            
+            p{
+                text-align: left;
+                font-family: 'roboto-bold';
+                font-size: 1.1em;
+                align-self: flex-end;
+                margin-bottom : 16px;
+            }
+        }
+
+        .article__valider{
+            width: 0px;
+            display: none;
+        }
+    }
+
+    /** animation du bouton produit  **/
+
+

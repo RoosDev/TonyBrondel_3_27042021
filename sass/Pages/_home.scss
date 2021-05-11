@@ -6,11 +6,11 @@
 
 main{
     clear: both;
-    @include positionzone($Color_Gris_light);
+    @include positionzone($Color_Gris_Superlight);
 }
     .main__title h2{
+        margin: 40px auto 15px 30px;
         @extend %__titlepart;
-
     }
 
     .main__card{
@@ -46,69 +46,17 @@ main{
                 height: 100%;
 
                 h4{
-                    margin: 10px 15px 0 15px; ;
+                    margin: 15px 15px 0 15px;
                 }
 
                 p{
-                    margin: 5px 15px 0 15px; ;
+                    margin: 5px 15px 0 15px;
                 }
             }
 
             .card__description__love{
-                width: 50px;
-                height: 100%;
-                @include flexsimple (row, nowrap, center, center);
-
-                i{
-                    line-height: 100%; 
-                }
-                    
-                .fa-heart{
-                    font-size: 1.6em;
-                    cursor: pointer;
-
-                }
-
-                .fas{
-                    position: absolute;
-                    transform-origin: center center;
-                    background: linear-gradient($Color_Marque_Primaire, $Color_Marque_Secondaire );
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    background-clip: text;
-                    transform: scale(0);
-                    opacity: 0;
-                    transition: all 350ms;
-                        &:hover, :focus, :active{
-                            transform: scale(1);
-                            opacity: 1;
-                        }
-                        &:hover + .far, :focus + .far, :active + .far{
-                            transform: scale(0);
-                            opacity: 0;
-                        }
-                }
-                
-                .far{
-                    position: absolute;
-                    transform-origin: center center;
-                    transform: scale(0.9);
-                    opacity: 1;
-                    transition: all 350ms;
-                    &:hover, :focus, :active{
-                        transform: scale(0);
-                        opacity: 0;
-                    }
-                    &:hover + .fas, :focus + .fas, :active + .fas{
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-
-                }
-            
-
-
+                @include flexsimple(row, nowrap, center, center);
+                @extend .heartislove;
 
             }
 
