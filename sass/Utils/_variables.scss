@@ -23,8 +23,17 @@ $Pic_Background_resto4 : "..";
 
 /**** Les variables de temps ****/
 
-
+    /*... pour le loader */
 $loader-duree: 1350ms;
 $loader-delay : 150ms;
 $loader_nb_de_tour:2;
 $loading-site : ($loader-duree*$loader_nb_de_tour) + $loader-delay*2;
+
+
+    /*... pour le l'affichage des articles du menu */
+$articlemenu-duree :650ms;
+$articlemenu-delay: $articlemenu-duree/2;
+$articlemenu-nb_de_tour: 1 ; 
+
+    /*... pour la coche verte des articles */
+$articlevalider-duree: 350ms;

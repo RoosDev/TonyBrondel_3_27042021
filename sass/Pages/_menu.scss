@@ -23,8 +23,17 @@ main{
 
 }
 
-.menu__header{
+.menu__header--alafrancaise{
     @include headermenu(alafrancaise);
+}
+.menu__header--lapalettedugout{
+    @include headermenu(lapalettedugout);
+}
+.menu__header--lanoteenchantee{
+    @include headermenu(lanoteenchantee);
+}
+.menu__header--ledelicedessens{
+    @include headermenu(ledelicedessens);
 }
 
 .resto__title{
@@ -55,6 +64,7 @@ main{
 
 section{
     @include flexsimple(column, wrap, center, center);
+    margin-bottom: 25px;
     width: 100%
 }
 
@@ -68,7 +78,7 @@ section{
     article{
         width: 400px;
         height: 75px;
-        margin : 15px auto 15px auto;
+        margin : 15px auto 5px auto;
         align-self: center;
         @include flexsimple(row, nowrap, center, flex-end);
         background-color: #fff;
@@ -76,13 +86,16 @@ section{
         box-shadow: 3px 3px 5px rgba($Color_Gris_Dark,0.3);
         cursor: pointer;
         animation-name: articlevalider;
-        animation-delay: 0s;
-        animation-duration: 550ms;
+        animation-duration: $articlemenu-duree;
         animation-fill-mode: both;
         animation-direction: alternate-reverse;
-        animation-iteration-count: 1;
+        animation-iteration-count: $articlemenu-nb_de_tour;
         animation-timing-function: linear;
-
+        @for $i from 1 through 15 {
+            &[class="article--#{$i}"]{
+                animation-delay: $articlemenu-delay * $i;
+            }
+        }
     
 
         .article__text{
@@ -113,7 +126,7 @@ section{
             @include flexsimple(column, nowrap, flex-start, flex-start);
             transform-origin: left;
             transform: scaleX(1);
-            transition: all 1s;
+            transition: all $articlevalider-duree;
 
         }
         .article__price{
@@ -141,20 +154,33 @@ section{
             background-color: $Color_Marque_Tertiaire;
             border-radius: 0px 15px 15px 0px;
             transform-origin: right ;
-            transition: all 1s;
+            transition: all $articlevalider-duree;
 
             i{
                 color: #fff;
                 font-size: 1.6em;
                 opacity: 0;
                 transform: rotate(-360deg);
-                transition: all 1s;
+                transition: all $articlevalider-duree;
 
             }
         }
     }
-    /** CSS pour le HOVER des articles  **/
-/article:hover{
+    
+
+    #menu_order{
+        @include flexsimple(row, nowrap, center, center);
+        margin : 25px auto 100px auto;
+    }
+
+/**------------------------------------------------**/
+/**   Les animation des pages menu ci-dessous      **/
+/**------------------------------------------------**/
+
+
+    /** CSS pour le HOVER des articles V  **/
+
+article:hover{
     .article__text{
     width: 235px;
     }
@@ -163,13 +189,10 @@ section{
         i{
             opacity: 1;
             transform: rotate(0deg);
-
         }
     }
-
 }
-
-
+    
 
     /** animation pour l'affichage progressif des articles  **/
 
