@@ -66,7 +66,7 @@ section{
 /** Mise en page et mise en forme de chaque produit **/
 
     article{
-        width: 90%;
+        width: 400px;
         height: 75px;
         margin : 15px auto 15px auto;
         align-self: center;
@@ -74,14 +74,24 @@ section{
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 3px 3px 5px rgba($Color_Gris_Dark,0.3);
+        cursor: pointer;
+        animation-name: articlevalider;
+        animation-delay: 0s;
+        animation-duration: 550ms;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+
+    
 
         .article__text{
             h4{
-                margin : 15px auto 3px 15px;
+                margin : 15px auto 3px 0;
              }
     
             p{
-                margin: 2px auto 15px 15px;
+                margin: 2px auto 15px 0;
                 
             }
 
@@ -98,15 +108,20 @@ section{
         }
 
         .article__text{
-            width: 85%;
+            width: 325px;
+            margin-left: 15px;
             @include flexsimple(column, nowrap, flex-start, flex-start);
+            transform-origin: left;
+            transform: scaleX(1);
+            transition: all 1s;
 
         }
         .article__price{
-            width: 10%;
+            width: 40px;
             @include flexsimple(column, nowrap, flex-end, flex-end);
             margin-right: 15px;
             margin-left: 15px;
+            transform-origin: center;
             
             p{
                 text-align: left;
@@ -114,15 +129,72 @@ section{
                 font-size: 1.1em;
                 align-self: flex-end;
                 margin-bottom : 16px;
+
             }
         }
 
         .article__valider{
-            width: 0px;
-            display: none;
+            width: 0%;
+            height: 100%;
+            @include flexsimple(row, nowrap, center, center);
+            line-height: 100%;
+            background-color: $Color_Marque_Tertiaire;
+            border-radius: 0px 15px 15px 0px;
+            transform-origin: right ;
+            transition: all 1s;
+
+            i{
+                color: #fff;
+                font-size: 1.6em;
+                opacity: 0;
+                transform: rotate(-360deg);
+                transition: all 1s;
+
+            }
+        }
+    }
+    /** CSS pour le HOVER des articles  **/
+/article:hover{
+    .article__text{
+    width: 235px;
+    }
+    .article__valider{
+    width: 80px;
+        i{
+            opacity: 1;
+            transform: rotate(0deg);
+
         }
     }
 
-    /** animation du bouton produit  **/
+}
 
 
+
+    /** animation pour l'affichage progressif des articles  **/
+
+@keyframes articlevalider {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(20px);
+        opacity: 0;
+
+    }
+}
+
+    /** animation pour l'affichage de la coche de validation des articles  **/
+
+
+@keyframes AjoutValider{
+    0%{
+
+
+    }
+    100%{
+
+
+    }
+}
