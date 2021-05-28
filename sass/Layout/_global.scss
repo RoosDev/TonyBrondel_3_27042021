@@ -1,0 +1,11 @@
+/* Mise en forme de l'architecture globale*/
+body{
+    @include flexsimple(column, nowrap, flex-start, flex-start);
+    margin: 0px;
+    width: 100%;
+}
+
+
+body #container{
+    width: 100%;
+}
