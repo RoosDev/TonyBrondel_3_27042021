@@ -30,4 +30,137 @@ align-items: $alignV;
 }
 
 
+/*   Mixin pour la mise en forme des cards  */
 
+    /* maps+ mixin pour commencer ;) */ 
+
+$photobackgroundheader:(
+    lapalettedugout:(
+        imgbckgnd:"../images/resto_resize/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    ),
+    lanoteenchantee:(
+        imgbckgnd:"../images/resto_resize/stil-u2Lp8tXIcjw-unsplash.jpg",
+    ),
+    alafrancaise:(
+        imgbckgnd:"../images/resto_resize/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+    ),
+    ledelicedessens:(
+        imgbckgnd:"../images/resto_resize/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+    ),
+
+);
+
+
+@mixin headercard($resto){
+    $image:map-get($photobackgroundheader, $resto);
+    width: 100%;
+    min-height: 175px;
+    margin: 0px;
+    display: flex;
+    background-image: url(map-get($image, imgbckgnd));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border : 0px;
+    border-radius: 20px 20px 0 0 ;
+    @include flexsimple(row, nowrap, flex-end, flex-start)
+
+}
+
+@mixin headermenu($resto){
+    $image:map-get($photobackgroundheader, $resto);
+    width: 100%;
+    min-height: 275px;
+    margin: 0px;
+    display: flex;
+    background-image: url(map-get($image, imgbckgnd));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border : 0px;
+    position: relative;
+    z-index: 0;
+    @include flexsimple(row, nowrap, flex-end, flex-start)
+
+}
+
+        /* maps+ mixin pour nouveau resto ou pas  ;) */ 
+        $newrestaurant:(
+            new:(
+                display: flex,
+            ),
+            notnew:(
+                display: none,
+            ),
+        
+        );
+        
+        @mixin flagnewrestaurant($newornot){
+            $displayNEW:map-get($newrestaurant, $newornot);
+            width : 100%;
+            height: 30px;
+            background-color: $Color_Marque_Tertiaire;
+            color : #31a488;
+            border : 0px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bolder;
+            display: map-get($displayNEW, display);
+            justify-content: center;
+            align-self: center;
+        }
+ /*********************************************/
+   
+    /* maps+ mixin pour le petit coeur   ;) */ 
+    $statutdukiff:(
+        hover:(
+            display: flex,
+        ),
+        focus:(
+            display: none,
+        ),
+    
+    );
+    
+    @mixin couleurdukif($statut){
+        $statutpourcouleur:map-get($statutdukiff, $kiffornot);
+        line-height: 100%;
+        color: $coloricone;
+        line-height: $taillebox;
+        margin-right: $taillebox*0.5;
+    
+    }
+
+
+/*********************************************/
+@mixin descriptioncard($couleurfond) {
+    background-color: $couleurfond;
+    width: 100%;
+    height: 70px;
+    border:0px;
+    border-radius: 0 0 20px 20px;
+    margin: 0px;
+    @include flexsimple(row, nowrap , space-between, flex-start);
+}
+
+
+/**** Les mixin des media queries ****/
+
+@mixin mobilescreen{
+    @media (max-width:map-get($breakpoint , mobile )){
+        @content
+    }
+};
+
+@mixin tabletscreen{
+    @media (max-width:map-get($breakpoint , tablet )){
+        @content
+    }
+};
+
+@mixin largescreen{
+    @media screen and (max-width:map-get($breakpoint , laptop )){
+        @content
+    }
+};

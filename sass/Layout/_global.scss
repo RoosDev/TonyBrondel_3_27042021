@@ -1,19 +1,11 @@
 /* Mise en forme de l'architecture globale*/
 body{
-    width: 100%;
-    height: 100%;
-    @include flexsimple(column, nowrap, space-between, flex-start);
+    @include flexsimple(column, nowrap, flex-start, flex-start);
     margin: 0px;
-    
+    width: 100%;
 }
 
-#container{
+
+body #container{
     width: 100%;
-    height: 730px;
-    margin: 0px;
-    @include tabletscreen{
-        @include flexsimple(row, wrap, flex-start, flex-start);
-
-    }
-
 }
