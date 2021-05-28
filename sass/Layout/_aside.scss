@@ -7,6 +7,14 @@ aside{
     @include positionzone(#fff);
     @include flexsimple(column, nowrap, flex-start, flex-start);
     z-index: 0;
+    @include tabletscreen{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(50px, auto));
+        grid-template-areas:    "localisation"
+                                "Fonctionnement"
+                                "motivation";
+
+    }
 }
 
 #aside__localisation{
@@ -14,6 +22,7 @@ aside{
     margin: 0px;
     @include flexsimple(row, nowrap, flex-start, flex-start);
     background-color: $Color_Gris_light;
+    grid-area: localisation;
     
 }
 
@@ -35,7 +44,7 @@ aside{
         display: flex;
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;
-
+        grid-area: motivation;
     }
 
         .aside__motivation__slogan{
@@ -84,6 +93,13 @@ aside{
     #aside__Fonctionnement{
         width: 100%;
         margin : 30px auto 50px auto;
+        grid-area: Fonctionnement;
+        @include tabletscreen{
+            flex-flow: row nowrap;
+
+        }
+
+
     }
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
@@ -93,6 +109,11 @@ aside{
         .aside__Fonctionnement__etapes{
             width: 90%;
             margin: auto;
+            @include tabletscreen{
+                flex-flow: row nowrap;
+    
+            }
+    
         }
 
         .aside__etapes__no1, .aside__etapes__no2{

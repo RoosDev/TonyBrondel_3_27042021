@@ -8,8 +8,16 @@ header{
     @include flexsimple(row, nowrap, space-between, center);
     box-shadow: 0px 3px 5px $Color_Gris_Dark;
     z-index: 1;
+    background-color: cornflowerblue;
+    
     @include tabletscreen{
-        width: 100%;
+        height: 50px;
+        grid-area: head;
+        display: grid;
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, minmax(20px, auto));
+        grid-template-areas:    "head-back head-back head-logo head-logo head-logo head-logo ";
     }
 }
 
@@ -17,7 +25,8 @@ header{
         position: absolute;
         display: none;
         z-index: 10;
-        
+        grid-area: head-back;
+        background-color: coral;
         a i{
             margin : -5px auto auto 20px;
             font-size: 1.3em;
@@ -34,8 +43,10 @@ header{
         width: 100%;
         display: flex;
         margin : 0px;
-        background-color: #fff;
+        background-color: rgb(170, 22, 22);
         z-index: 1;
+        grid-area: head-logo;
+
         @include tabletscreen{
             width: 90%;
         }
@@ -46,6 +57,7 @@ header{
             z-index: 1;
             @include tabletscreen{
                 width: 150px;
+                margin :0px;
             }
         
         }

@@ -1,7 +1,7 @@
 footer{
     clear: both;
     @include positionzone($Color_Gris_VeryDark);
-       
+    grid-area: footer;
 }
 
     .footer__links__title h1{
