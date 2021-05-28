@@ -43,14 +43,16 @@ aside{
 
     .aside__motivation{
         width: 100%;
+        height: 250px;
         margin: 0 auto 0 auto;
         display: flex;
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;
 
         @include tabletscreen{
-            align-self: flex-start;
             width: 25%;
+            height: 300px;
+            align-self: flex-start;
             margin-left:0px;
             order: 3;
         }
@@ -74,6 +76,7 @@ aside{
         .aside__motivation__detail{
             margin : 15px auto 5px auto;
             display: flex;
+            height: 200px;
 
         }
 

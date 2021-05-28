@@ -4,3 +4,22 @@ $breakpoint:(
     laptop : 1200px
 );
 
+/**** Les mixin des media queries ****/
+
+@mixin mobilescreen{
+    @media (min-width:0px) and (max-width:map-get($breakpoint , mobile )){
+        @content
+    }
+};
+
+@mixin tabletscreen{
+    @media (min-width:map-get($breakpoint , mobile )+1) and (max-width:map-get($breakpoint , tablet )){
+        @content
+    }
+};
+
+@mixin largescreen{
+    @media screen and (min-width:map-get($breakpoint , tablet )+1) and (max-width:map-get($breakpoint , laptop )){
+        @content
+    }
+};

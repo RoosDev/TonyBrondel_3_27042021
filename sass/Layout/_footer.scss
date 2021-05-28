@@ -2,6 +2,10 @@ footer{
     clear: both;
     @include positionzone($Color_Gris_VeryDark);
 
+    @include tabletscreen{
+        position: relative;
+        margin-top:0px;
+    }
 }
 
     .footer__links__title h1{

@@ -1,12 +1,15 @@
 /* Mise en forme de l'architecture globale*/
 body{
+    width: 100%;
+    height: 100%;
     @include flexsimple(column, nowrap, flex-start, flex-start);
     margin: 0px;
-    width: 100%;
+    
 }
 
 #container{
     width: 100%;
+    height: 100%;
     @include tabletscreen{
         @include flexsimple(row, wrap, flex-start, flex-start);
 
