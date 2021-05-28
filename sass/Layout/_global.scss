@@ -8,14 +8,8 @@ body{
 #container{
     width: 100%;
     @include tabletscreen{
-        display: grid;
-        gap: 0;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(6, minmax(50px, auto));
-        grid-template-areas:    "head head head head head localisation"
-                                "Fonctionnement Fonctionnement Fonctionnement Fonctionnement Fonctionnement Fonctionnement "
-                                "contenupage contenupage contenupage contenupage contenupage motivation"
-                                "footer footer footer footer footer footer";
+        @include flexsimple(row, wrap, flex-start, flex-start);
+
     }
 
 }

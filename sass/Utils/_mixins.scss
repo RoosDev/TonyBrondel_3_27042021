@@ -28,7 +28,14 @@ align-items: $alignV;
     box-shadow: 3px 3px 5px $Color_Gris_Dark;
     background-color: rgba($couleurfond, $opacite);
     @include flexsimple(row, nowrap, flex-start, center);
- 
+    @include tabletscreen{
+        width: 28%;
+        height: 35px;
+        margin: 10px auto 10px auto;
+        .aside__etapes__text p{
+            text-align: left;
+        }
+    }
 }
 
 /** mixin pour les icones awesome*/

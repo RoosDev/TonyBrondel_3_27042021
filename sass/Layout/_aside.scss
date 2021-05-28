@@ -8,12 +8,8 @@ aside{
     @include flexsimple(column, nowrap, flex-start, flex-start);
     z-index: 0;
     @include tabletscreen{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, minmax(50px, auto));
-        grid-template-areas:    "localisation"
-                                "Fonctionnement"
-                                "motivation";
-
+        @include flexsimple(row, wrap, flex-start, flex-start);
+        width: auto;
     }
 }
 
@@ -22,7 +18,14 @@ aside{
     margin: 0px;
     @include flexsimple(row, nowrap, flex-start, flex-start);
     background-color: $Color_Gris_light;
-    grid-area: localisation;
+
+    @include tabletscreen{
+        position: relative;
+        width: 25%;
+        order: 1;
+        z-index: 1;
+
+    }
     
 }
 
@@ -44,9 +47,15 @@ aside{
         display: flex;
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;
-        grid-area: motivation;
-    }
 
+        @include tabletscreen{
+            align-self: flex-start;
+            width: 25%;
+            margin-left:0px;
+            order: 3;
+        }
+        
+    }
         .aside__motivation__slogan{
             width: 70%;
             margin : 25px auto 5px auto;
@@ -93,25 +102,29 @@ aside{
     #aside__Fonctionnement{
         width: 100%;
         margin : 30px auto 50px auto;
-        grid-area: Fonctionnement;
+
         @include tabletscreen{
-            flex-flow: row nowrap;
-
+            width: 75%;
+            height: 50px;
+            margin: 0 auto 0px auto;
+            order:2;
+            @include flexsimple(row, nowrap,flex-start,center);
         }
-
-
     }
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
-
+            @include tabletscreen{
+                font-size: 1.2em;
+                margin-left : 5px;
+            }
         }
     
         .aside__Fonctionnement__etapes{
             width: 90%;
             margin: auto;
             @include tabletscreen{
-                flex-flow: row nowrap;
-    
+                @include flexsimple(row, nowrap,flex-start,center);
+                
             }
     
         }
@@ -134,17 +147,29 @@ aside{
                     @extend .pucenumero;
                     
                 }
+                
+                @include tabletscreen{
+                    margin : auto 5px auto -10px;
+                }
+
             }
 
             .aside__etapes__icone1 i, .aside__etapes__icone2 i{
                 @include coloriconawesome(rgb(128, 128, 128), 20px);
                 margin: auto 15px auto 15px;
+                @include tabletscreen{
+                    margin : auto 5px auto 5px;
+                }
             }
 
 
             .aside__etapes__icone3 i{
                 @include coloriconawesome($Color_Marque_Primaire, 20px);
                 margin: auto 15px auto 15px;
+                @include tabletscreen{
+                    margin : auto 5px auto 5px;
+                }
+
             }
 
             .aside__etapes__text p{
