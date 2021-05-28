@@ -13,13 +13,13 @@ $breakpoint:(
 };
 
 @mixin tabletscreen{
-    @media (min-width:map-get($breakpoint , mobile )+1) and (max-width:map-get($breakpoint , tablet )){
+    @media (min-width:map-get($breakpoint , mobile )+1){
         @content
     }
 };
 
 @mixin largescreen{
-    @media screen and (min-width:map-get($breakpoint , tablet )+1) and (max-width:map-get($breakpoint , laptop )){
+    @media screen and (min-width:map-get($breakpoint , tablet )+1) {
         @content
     }
 };

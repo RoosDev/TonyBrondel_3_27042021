@@ -51,7 +51,7 @@ aside{
 
         @include tabletscreen{
             width: 25%;
-            height: 300px;
+            height: $height_motivation_tablette;
             align-self: flex-start;
             margin-left:0px;
             order: 3;

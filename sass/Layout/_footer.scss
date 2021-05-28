@@ -4,7 +4,8 @@ footer{
 
     @include tabletscreen{
         position: relative;
-        margin-top:0px;
+        margin-top: -$height_motivation_tablette;
+        
     }
 }
 
@@ -16,6 +17,12 @@ footer{
 
     ul{
         margin : 0px 0px 30px 0px;
+
+        @include tabletscreen{
+            @include flexsimple(row, nowrap, flex-start, flex-start);
+            margin-bottom: 20px;
+
+        }
     }
 
         li{

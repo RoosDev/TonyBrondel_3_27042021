@@ -2,20 +2,20 @@
 /***               Le CSS de la home d'accueil                **/
 /***************************************************************/
 
-
+body main{
+    @include tabletscreen{ 
+        background-color: #ffffff;
+    }
+}
 
 main{
     clear: both;
-    @include positionzone($Color_Gris_Superlight);
 
     @include tabletscreen{ 
-        @include positionzone(#ffffff);
-        border: 2px solid $Color_Marque_Secondaire;
-        border-radius: 10px;
         width: 75%;
-        max-width: 750px;
+        max-width: 760px;
         position: absolute;
-        top: -300px;
+        top: -$height_motivation_tablette;
         left: 25%;
         align-self: flex-end;
         margin-bottom: 0px;
@@ -56,9 +56,10 @@ main{
             @include flexsimple(column, nowrap, flex-end, flex-start);
             transform: scale(1);
             transition: transform 200ms;
+
             @include tabletscreen{ 
                 width: 75%;
-                margin: 10px 10px 20px 10px;
+                margin: 5px 10px 10px 10px;
             }
     
 

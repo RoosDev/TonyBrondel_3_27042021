@@ -83,8 +83,11 @@ $photobackgroundheader:(
     background-position: center;
     border : 0px;
     border-radius: 20px 20px 0 0 ;
-    @include flexsimple(row, nowrap, flex-end, flex-start)
+    @include flexsimple(row, nowrap, flex-end, flex-start);
 
+    @include tabletscreen{
+        min-height:160px;   
+    }
 }
 
 @mixin headermenu($resto){
