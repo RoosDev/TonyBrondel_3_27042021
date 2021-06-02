@@ -1,0 +1,20 @@
+/** Mixin pour la mise en forme de grand bouton rectangle avec choix de couleur de fond*/
+
+@mixin boutonetape($couleurfond, $opacite) {
+    width: 350px;
+    height: 60px;
+    margin: 20px auto 20px auto;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px $Color_Gris_Dark;
+    background-color: rgba($couleurfond, $opacite);
+    @include flexsimple(row, nowrap, flex-start, center);
+    @include tabletscreen{
+        width: 28%;
+        height: 35px;
+        margin: 10px auto 10px auto;
+        .aside__etapes__text p{
+            text-align: left;
+        }
+    }
+}

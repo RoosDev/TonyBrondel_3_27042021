@@ -2,18 +2,13 @@
 /***               Le CSS de la home d'accueil                **/
 /***************************************************************/
 
+
 body main{
-    @include tabletscreen{ 
-        background-color: #ffffff;
-    }
-}
-
-main{
-    clear: both;
 
     @include tabletscreen{ 
-        width: 75%;
+        width: 100%;
         max-width: 760px;
+        background-color: #ffffff;
         position: absolute;
         top: -$height_motivation_tablette;
         left: 25%;
@@ -23,7 +18,6 @@ main{
 
     }
 
-}
     .main__title{
         @include tabletscreen{ 
             width: 100%;
@@ -136,4 +130,5 @@ main{
                 }
         }
     }
+}
 
