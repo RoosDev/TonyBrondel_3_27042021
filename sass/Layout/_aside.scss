@@ -63,6 +63,13 @@ aside{
             margin-left: 0px;
             order: 3;
         }
+
+        @include notescreen{
+            order: 2;
+            
+
+        }
+
         @include troppetitscreen{
             display: none;
     
@@ -98,19 +105,15 @@ aside{
 
         }
 
-
         .aside__motivation__button{
             width: 100%;
             margin: 25px auto 50px auto;
             text-align: center;
         }
 
-        
-
             button{
                 @extend %__wouahoubouton;
             }
-    
     
     #aside__Fonctionnement{
         width: 100%;
@@ -121,6 +124,8 @@ aside{
     
         }
     
+
+
         @include tabletscreen{
             @include flexsimple(row, nowrap, flex-start, center);
             width: 60%;
@@ -131,7 +136,7 @@ aside{
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
             
-            @include tabletscreen{
+            @include notescreen{
                 display: none;
             }
 
@@ -152,9 +157,8 @@ aside{
         }
 
         div[class*="aside__etapes__no"]{
-           
+
             @include mobilescreen{
-                max-width: 300px;
             }
     
             @include tabletscreen{

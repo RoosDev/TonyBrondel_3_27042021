@@ -16,25 +16,25 @@ $breakpoint:(
 
 
 @mixin mobilescreen{
-    @media only screen and (min-width:map-get($breakpoint , toutpetit )) and (max-width:map-get($breakpoint , mobile )){
+    @media only screen and (min-width:map-get($breakpoint , toutpetit )) {
         @content
     }
 };
 
 @mixin notescreen{
-    @media only screen and (min-width:map-get($breakpoint , mobile )) and (max-width:map-get($breakpoint , notephone )){
+    @media only screen and (min-width:map-get($breakpoint , mobile )) {
         @content
     }
 };
 
 @mixin tabletscreen{
-    @media only screen and (min-width:map-get($breakpoint , mobile )+1){
+    @media only screen and (min-width:map-get($breakpoint , notephone )){
         @content
     }
 };
 
 @mixin largescreen{
-    @media only screen and (min-width:map-get($breakpoint , tablet )+1) {
+    @media only screen and (min-width:map-get($breakpoint , tablet )) {
         @content
     }
 };

@@ -20,7 +20,7 @@ align-items: $alignV;
 /** Mixin pour la mise en forme de grand bouton rectangle avec choix de couleur de fond*/
 
 @mixin boutonetape($couleurfond, $opacite) {
-    width: 350px;
+    width: 94%;
     height: 60px;
     margin: 20px auto 20px auto;
     border: 0px;
