@@ -116,17 +116,17 @@ aside{
         width: 100%;
         margin : 30px auto 50px auto;
 
+        @include troppetitscreen{
+            display: none;
+    
+        }
+    
         @include tabletscreen{
             @include flexsimple(row, nowrap, flex-start, center);
             width: 60%;
             margin : auto auto auto 20%;
         
         }
-        @include troppetitscreen{
-            display: none;
-    
-        }
-    
     }
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
@@ -140,6 +140,8 @@ aside{
         .aside__Fonctionnement__etapes{
             width: 90%;
             margin: auto;
+
+
             @include tabletscreen{
                 width: 100%;
                 @include flexsimple(row, nowrap, flex-start, center);
@@ -150,6 +152,11 @@ aside{
         }
 
         div[class*="aside__etapes__no"]{
+           
+            @include mobilescreen{
+                max-width: 300px;
+            }
+    
             @include tabletscreen{
                 margin-right: 20px;
                 margin-left: 20px;
@@ -230,7 +237,7 @@ aside{
 
     h2{
         @include troppetitscreen{
-            font-size: 0.7em;
+            font-size: 1.0em;
     
         }
     

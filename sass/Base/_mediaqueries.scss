@@ -1,5 +1,7 @@
 $breakpoint:(
-    mobile : 768px,
+    toutpetit: 340px,
+    mobile : 640px,
+    notephone : 870px,
     tablet : 1024px,
     laptop : 1200px
 );
@@ -7,26 +9,32 @@ $breakpoint:(
 /**** Les mixin des media queries ****/
 
 @mixin troppetitscreen{
-    @media (min-width:0px) and (max-width:300px){
+    @media only screen and (min-width:0px) and (max-width:map-get($breakpoint , toutpetit )){
         @content
     }
 };
 
 
 @mixin mobilescreen{
-    @media (min-width:300px) and (max-width:map-get($breakpoint , mobile )){
+    @media only screen and (min-width:map-get($breakpoint , toutpetit )) and (max-width:map-get($breakpoint , mobile )){
+        @content
+    }
+};
+
+@mixin notescreen{
+    @media only screen and (min-width:map-get($breakpoint , mobile )) and (max-width:map-get($breakpoint , notephone )){
         @content
     }
 };
 
 @mixin tabletscreen{
-    @media (min-width:map-get($breakpoint , mobile )+1){
+    @media only screen and (min-width:map-get($breakpoint , mobile )+1){
         @content
     }
 };
 
 @mixin largescreen{
-    @media screen and (min-width:map-get($breakpoint , tablet )+1) {
+    @media only screen and (min-width:map-get($breakpoint , tablet )+1) {
         @content
     }
 };
