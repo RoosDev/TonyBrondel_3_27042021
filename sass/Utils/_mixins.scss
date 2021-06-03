@@ -42,8 +42,22 @@ align-items: $alignV;
     margin-right: $taillebox*0.5;
 }
 
+/**------------------------------------------*/
+/*   Mixins pour la mise en forme des cards  */
+/**------------------------------------------*/
 
-/*   Mixin pour la mise en forme des cards  */
+    /* dimension des cards */
+
+@mixin cartedimension($Largeur){
+    width: $Largeur;
+    max-width: 400px;
+    margin : 0px auto 40px auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px $Color_Gris_Dark ;
+}
+
+
+
 
     /* maps+ mixin pour commencer ;) */ 
 
