@@ -7,6 +7,14 @@ aside{
     @include positionzone(#fff);
     @include flexsimple(column, nowrap, flex-start, flex-start);
     z-index: 0;
+    @include tabletscreen{
+        position: absolute;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-top: 0px;
+        z-index: 5;
+        background-color: transparent;
+    }
 }
 
 #aside__localisation{
@@ -15,6 +23,18 @@ aside{
     @include flexsimple(row, nowrap, flex-start, flex-start);
     background-color: $Color_Gris_light;
     
+    @include tabletscreen{
+        width: 15%;
+        order: 2;
+        z-index: 20;
+
+    }
+
+    @include troppetitscreen{
+        display: none;
+
+    }
+
 }
 
     .aside__localisation_ico{
@@ -36,6 +56,16 @@ aside{
         flex-flow: column nowrap;
         background-color: $Color_Gris_Superlight;
 
+        @include tabletscreen{
+            align-self: flex-start;
+            width: 30%;
+            margin-left: 0px;
+            order: 3;
+        }
+        @include troppetitscreen{
+            display: none;
+    
+        }
     }
 
         .aside__motivation__slogan{
@@ -84,22 +114,57 @@ aside{
     #aside__Fonctionnement{
         width: 100%;
         margin : 30px auto 50px auto;
+
+        @include tabletscreen{
+            @include flexsimple(row, nowrap, flex-start, center);
+            width: 65%;
+            margin : auto auto auto 20%;
+        
+        }
+        @include troppetitscreen{
+            display: none;
+    
+        }
+    
     }
         .aside__Fonctionnement__title h2{
             @extend %__titlepart;
+            
+            @include tabletscreen{
+                display: none;
+            }
 
         }
     
         .aside__Fonctionnement__etapes{
             width: 90%;
             margin: auto;
+            @include tabletscreen{
+                width: 100%;
+                @include flexsimple(row, nowrap, flex-start, center);
+                margin: auto;
+            }
+    
+    
         }
+
+        div[class*="aside__etapes__no"]{
+            @include tabletscreen{
+                margin-right: 20px;
+                margin-left: 20px;
+            
+            }
+
+        }
+
 
         .aside__etapes__no1, .aside__etapes__no2{
             @include boutonetape(#fff, 1);
         }   
         .aside__etapes__no3{
                 @include boutonetape($Color_Marque_Primaire, 0.2);
+    
+    
             }
 
             .aside__etapes__number{
@@ -108,8 +173,11 @@ aside{
                 justify-content: center;
                 align-items: center;
                 margin: auto 10px auto -10px;
-
-                p{
+                @include tabletscreen{
+                    margin-right: 0px;
+                
+                }
+                    p{
                     @extend .pucenumero;
                     
                 }
@@ -118,16 +186,55 @@ aside{
             .aside__etapes__icone1 i, .aside__etapes__icone2 i{
                 @include coloriconawesome(rgb(128, 128, 128), 20px);
                 margin: auto 15px auto 15px;
+
+                @include tabletscreen{
+                    margin-right: 7px;
+                    margin-left: 7px;
+                
+                }
+    
             }
 
 
             .aside__etapes__icone3 i{
                 @include coloriconawesome($Color_Marque_Primaire, 20px);
                 margin: auto 15px auto 15px;
+                @include tabletscreen{
+                    margin-right: 7px;
+                    margin-left: 7px;
+                
+                }
             }
 
             .aside__etapes__text p{
                 font-family: 'Roboto-Bold';
                 font-weight: bolder;
-
+                @include tabletscreen{
+                    text-align: left;
+                
+                }
             }
+
+
+
+/**    Mise en forme de la résolution trop petite **/
+
+#aside__resolutiontroppetite{
+    display: none;
+
+    @include troppetitscreen{
+        display: inline-block;
+
+    }
+
+    h2{
+        @include troppetitscreen{
+            font-size: 0.7em;
+    
+        }
+    
+        }
+
+
+}
+

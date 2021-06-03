@@ -157,23 +157,3 @@ $photobackgroundheader:(
     @include flexsimple(row, nowrap , space-between, flex-start);
 }
 
-
-/**** Les mixin des media queries ****/
-
-@mixin mobile-only{
-    @media (max-width:map-get($breakpoint , mobile )){
-        @content
-    }
-};
-
-@mixin tablet-only{
-    @media (max-width:map-get($breakpoint , tablet )){
-        @content
-    }
-};
-
-@mixin smallscreen{
-    @media screen and (max-width:map-get($breakpoint , laptop )){
-        @content
-    }
-};

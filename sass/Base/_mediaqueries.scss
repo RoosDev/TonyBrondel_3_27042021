@@ -1,5 +1,32 @@
 $breakpoint:(
     mobile : 768px,
-    tablet : 991px,
+    tablet : 1024px,
     laptop : 1200px
 );
+
+/**** Les mixin des media queries ****/
+
+@mixin troppetitscreen{
+    @media (min-width:0px) and (max-width:300px){
+        @content
+    }
+};
+
+
+@mixin mobilescreen{
+    @media (min-width:300px) and (max-width:map-get($breakpoint , mobile )){
+        @content
+    }
+};
+
+@mixin tabletscreen{
+    @media (min-width:map-get($breakpoint , mobile )+1){
+        @content
+    }
+};
+
+@mixin largescreen{
+    @media screen and (min-width:map-get($breakpoint , tablet )+1) {
+        @content
+    }
+};
