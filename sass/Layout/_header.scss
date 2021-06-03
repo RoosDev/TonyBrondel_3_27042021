@@ -11,8 +11,6 @@ header{
     z-index: 10;
 
     @include notescreen{
-        width: 100%;
-        background-color: transparent;
         height: 100px;
 
     }
@@ -41,11 +39,15 @@ header{
         z-index: 10;
 
         @include notescreen{
-            width: 15%;
+            width: 100%;
             min-width: 120px;
 
             margin: auto;
             margin-left: 50px;
+        }
+
+        @include tabletscreen{
+            width: 15%;
         }
 
     }
@@ -57,7 +59,13 @@ header{
 
             @include notescreen{
                 width: 100%;
+                max-width: 250px;
+                
+
             }
+
+
+            
         }
 
 

@@ -22,7 +22,7 @@ $breakpoint:(
 };
 
 @mixin notescreen{
-    @media only screen and (min-width:map-get($breakpoint , mobile )) {
+    @media only screen and (min-width:map-get($breakpoint , mobile )){
         @content
     }
 };

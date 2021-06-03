@@ -9,7 +9,7 @@ body{
 body #container{
     width: 100%;
 
-    @include tabletscreen{
+    @include notescreen{
         @include flexsimple(row, wrap, flex-start, flex-start);
 
     }

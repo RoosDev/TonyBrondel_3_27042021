@@ -8,15 +8,18 @@ body main{
     clear: both;
     @include positionzone($Color_Gris_Superlight);
 
-    @include tabletscreen{
-        width: 100%;
-    }
-
     @include troppetitscreen{
         display: none;
     }
 
+    @include notescreen{
+        width: 100%;
+        margin-top: 300px;
+    }
 
+    @include tabletscreen{
+        margin-top: auto;
+    }
 
 }
     .main__title{ 
@@ -28,6 +31,7 @@ body main{
         h2{
             margin: 40px auto 15px 30px;
             @extend %__titlepart;
+            
             @include tabletscreen{
                 margin: 25px auto 15px 15px;
         
@@ -51,9 +55,8 @@ body main{
         @include flexsimple(column, nowrap, flex-end, flex-start);
         transform: scale(1);
         transition: transform 200ms;
-        background-color: turquoise;
 
-        @include tabletscreen{
+        @include notescreen{
             @include cartedimension(45%);
         }
 
