@@ -8,12 +8,13 @@ aside{
     @include flexsimple(column, nowrap, flex-start, flex-start);
     z-index: 0;
 
-
-    @include notescreen{
+    @include midmobilenotescreen{
         width: 100%;
+        flex-flow: row wrap;
+    }
+@include notescreen{
         margin-top: 0px;
         position: absolute;
-        flex-flow: row wrap;
         background-color: transparent;
         z-index: 10;
     }
@@ -78,11 +79,16 @@ aside{
     
         }
 
+        @include midmobilenotescreen{
+            width: 50%;
+            margin: 0px;
+            background-color: transparent;
+        }
+
         @include notescreen{
             align-self: flex-start;
             width: 100%;
             margin-left: 0px;
-            background-color: transparent;
 
         }
 
@@ -128,8 +134,11 @@ aside{
             margin: 25px auto 50px auto;
             text-align: center;
 
+            @include midmobilenotescreen{
+                margin-bottom: 80px;
+            }
             @include notescreen{
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
         }
 
@@ -145,6 +154,13 @@ aside{
             display: none;
     
         }
+
+        @include midmobilenotescreen{
+            width: 50%;
+            margin: 0px;
+        }
+
+
         @include notescreen{
             width: 100%;
             @include flexsimple(row, nowrap, flex-start, center);
@@ -163,6 +179,9 @@ aside{
             @extend %__titlepart;
             
             @include notescreen{
+                // display: none;
+            }
+            @include tabletscreen{
                 display: none;
             }
 

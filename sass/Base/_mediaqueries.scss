@@ -1,7 +1,7 @@
 $breakpoint:(
     toutpetit: 340px,
     mobile : 640px,
-    notephone : 870px,
+    notephone : 820px,
     tablet : 1024px,
     laptop : 1200px
 ); 
@@ -21,14 +21,20 @@ $breakpoint:(
     }
 };
 
-@mixin notescreen{
+@mixin midmobilenotescreen{
     @media only screen and (min-width:map-get($breakpoint , mobile )){
         @content
     }
 };
 
-@mixin tabletscreen{
+@mixin notescreen{
     @media only screen and (min-width:map-get($breakpoint , notephone )){
+        @content
+    }
+};
+
+@mixin tabletscreen{
+    @media only screen and (min-width:map-get($breakpoint , tablet )){
         @content
     }
 };
