@@ -47,6 +47,7 @@ body main{
         @include tabletscreen{
             margin-left: 30%;
             width: 70%;
+            z-index: 20;
         }
     }
 
