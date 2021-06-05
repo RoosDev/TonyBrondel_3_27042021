@@ -1,0 +1,39 @@
+/**------------------------------------------------**/
+/**   Les animation des pages menu ci-dessous      **/
+/**------------------------------------------------**/
+
+
+    /** CSS pour le HOVER des articles V  **/
+
+    
+
+    /** animation pour l'affichage progressif des articles  **/
+
+    @keyframes articlevalider {
+        0%{
+            width: 0%;
+            transform: scaleX(0);
+            opacity: 0;
+    
+        }
+        100%{
+            width : 20%;
+            transform: scaleX(1);
+            opacity: 1;
+    
+        }
+    }
+    
+        /** animation pour l'affichage de la coche de validation des articles  **/
+    
+    
+    @keyframes AjoutValider{
+        0%{
+    
+    
+        }
+        100%{
+    
+    
+        }
+    }

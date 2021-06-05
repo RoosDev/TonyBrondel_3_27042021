@@ -14,6 +14,7 @@
         display: flex;
         z-index: 15;
     }
+
     @include troppetitscreen{
         display: none;
 
@@ -24,7 +25,6 @@
 
     }
     
-
     main{
         clear: both;
         @include positionzone($Color_Gris_light);
@@ -90,7 +90,7 @@
         margin-bottom: 25px;
         width: 100%;
         @include midmobilenotescreen{
-            width: 45%;
+            width: 50%;
         }
     }
 }
@@ -101,154 +101,134 @@
 
 /** Mise en page et mise en forme de chaque produit **/
 
+.resto__group__article{
+    width: 80%;
+    @include midmobilenotescreen{
+        width: 95%;
+    }
+
     article{
-        width: 400px;
-        height: 75px;
-        margin : 15px auto 5px auto;
-        align-self: center;
-        @include flexsimple(row, nowrap, center, flex-end);
+        @include flexsimple(row, nowrap, space-between, flex-start);
+        width: 100%;
+        min-width: 200px;
+        max-width: 450px;
+        height : 70px;
+        margin : 10px auto 10px auto ;
+        border-radius: 20px;
         background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 3px 3px 5px rgba($Color_Gris_Dark,0.3);
-        cursor: pointer;
-        animation-name: articlevalider;
-        animation-duration: $articlemenu-duree;
-        animation-fill-mode: both;
-        animation-direction: alternate-reverse;
-        animation-iteration-count: $articlemenu-nb_de_tour;
-        animation-timing-function: linear;
-        @for $i from 1 through 15 {
-            &[class="article--#{$i}"]{
-                animation-delay: $articlemenu-delay * $i;
+
+        &:hover{
+
+            .article__texte{
+                width:65%;
+                min-width: 170px;
             }
 
-            @include midmobilenotescreen{
-                width: 100%;
+            .article__valider{
+                width : 70px;
+                
+                transform: scaleX(1);
+                opacity: 1;
+
+                p{
+                    i{
+                        transform: rotate(0);
+
+                    }
+                }
             }
-        
         }
-    
 
-        .article__text{
-            h4{
-                margin : 15px auto 3px 0;
-             }
-    
-            p{
-                margin: 2px auto 15px 0;
+
+
+
+        .article__{
+
+
+            &texte{
+                @include flexsimple(column, nowrap, flex-start, flex-start);
+                width: 80%;
+                min-width: 170px;
+                margin: auto 0 auto 10px;
+                line-height: 100%;
+
+                h4, p{
+                    width: 100%;
+                    text-align: left;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                h4{
+                    margin: 0px auto 3px 0px;
+                }
+
+                p{
+                    margin: 3px auto 0px 0px;
+                }
+
+                /**   les éléments pour l'animation**/ 
+                transition: width 600ms;
+
                 
             }
+            &price{
+                @include flexsimple(column, nowrap, flex-end, flex-end);
+                border-radius: 0 20px 20px 0;
+                width : 15%;
+                min-width: 50px;
+                height: 100%;
+                background-color: #fff;
 
+                p{
+                    width: 100%;
+                    margin: auto auto 17px 0px;
+                    text-align: center;
+                    font-weight: bold;
 
-            h4, p{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                text-align: left;
-                width: 100%;
-                height: 20px;
+                }
+                
             }
-                        
-        }
+            &valider{
+                @include flexsimple(row, nowrap, center, center);
+                width : 0%;
+                margin-right: 0px;
+                border-radius: 0 20px 20px 0;
+                height: 100%;
+                background-color: $Color_Marque_Tertiaire;
 
-        .article__text{
-            width: 325px;
-            margin-left: 15px;
-            @include flexsimple(column, nowrap, flex-start, flex-start);
-            transform-origin: left;
-            transform: scaleX(1);
-            transition: all $articlevalider-duree;
+                p{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.3em;
+                    
+                    i{
+                        color: #fff;
+                        transform:rotate(-360deg);
+                        transition: transform 800ms;
+                    }
+                }
 
-        }
-        .article__price{
-            width: 40px;
-            @include flexsimple(column, nowrap, flex-end, flex-end);
-            margin-right: 15px;
-            margin-left: 15px;
-            transform-origin: center;
-            
-            p{
-                text-align: left;
-                font-family: 'roboto-bold';
-                font-size: 1.1em;
-                align-self: flex-end;
-                margin-bottom : 16px;
-
-            }
-        }
-
-        .article__valider{
-            width: 0%;
-            height: 100%;
-            @include flexsimple(row, nowrap, center, center);
-            line-height: 100%;
-            background-color: $Color_Marque_Tertiaire;
-            border-radius: 0px 15px 15px 0px;
-            transform-origin: right ;
-            transition: all $articlevalider-duree;
-
-            i{
-                color: #fff;
-                font-size: 1.6em;
+                /**   les éléments pour l'animation**/ 
+                transform: scaleX(0);
                 opacity: 0;
-                transform: rotate(-360deg);
-                transition: all $articlevalider-duree;
-
+                transform-origin: 100% 50%;
+                transition: all 600ms;
             }
         }
     }
-    
+}
+
+
+    /** Mise en place du bouton COMMANDER **/
 
     #menu_order{
         @include flexsimple(row, nowrap, center, center);
         margin : 25px auto 100px auto;
-    }
 
-/**------------------------------------------------**/
-/**   Les animation des pages menu ci-dessous      **/
-/**------------------------------------------------**/
-
-
-    /** CSS pour le HOVER des articles V  **/
-
-article:hover{
-    .article__text{
-    width: 235px;
-    }
-    .article__valider{
-    width: 80px;
-        i{
-            opacity: 1;
-            transform: rotate(0deg);
+        @include midmobilenotescreen{
+            margin: 10px auto 50px auto ;
         }
     }
-}
-    
 
-    /** animation pour l'affichage progressif des articles  **/
-
-@keyframes articlevalider {
-    0%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(20px);
-        opacity: 0;
-
-    }
-}
-
-    /** animation pour l'affichage de la coche de validation des articles  **/
-
-
-@keyframes AjoutValider{
-    0%{
-
-
-    }
-    100%{
-
-
-    }
-}

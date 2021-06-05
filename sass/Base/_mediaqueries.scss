@@ -14,12 +14,9 @@ $breakpoint:(
     }
 };
 
-
-@mixin mobilescreen{
-    @media only screen and (min-width:map-get($breakpoint , toutpetit )) {
-        @content
-    }
-};
+/* pas de breakpoint sur un format type "mobile screen" car le dev de base est au format mobile */
+/* donc sont prévu des breakpoint pour les résolutions en dessous et au dessus ;) */
+/* donc cela concerne les résolutions entre 340 et 640 px */
 
 @mixin midmobilenotescreen{
     @media only screen and (min-width:map-get($breakpoint , mobile )){
@@ -40,7 +37,7 @@ $breakpoint:(
 };
 
 @mixin largescreen{
-    @media only screen and (min-width:map-get($breakpoint , tablet )) {
+    @media only screen and (min-width:map-get($breakpoint , laptop )) {
         @content
     }
 };
