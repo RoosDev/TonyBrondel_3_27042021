@@ -12,67 +12,88 @@
 
     header #header__retour{
         display: flex;
-        z-index: 10;
+        z-index: 15;
     }
     @include troppetitscreen{
         display: none;
 
     }
 
-}
+    @include notescreen{
+        height: 100px;
 
-main{
-    clear: both;
-    @include positionzone($Color_Gris_light);
-    @include flexsimple(column, nowrap, flex-start,flex-start );
-
-}
-
-.menu__header--alafrancaise{
-    @include headermenu(alafrancaise);
-}
-.menu__header--lapalettedugout{
-    @include headermenu(lapalettedugout);
-}
-.menu__header--lanoteenchantee{
-    @include headermenu(lanoteenchantee);
-}
-.menu__header--ledelicedessens{
-    @include headermenu(ledelicedessens);
-}
-
-.resto__title{
-    @include positionzone($Color_Gris_light);
-    @include flexsimple(row, nowrap,space-between, center);
-
-    border: 0px;
-    border-radius: 40px 40px 0 0;
-    margin-top: -50px;
-    z-index: 10;
-
-    h1{
-        margin : 25px auto 25px 15px;
-        font-size: 2em;
     }
+    
 
-    .card__description__love{
-        margin : 50px 35px auto 15px;
-        @include flexsimple(row, nowrap,flex-end, center);
-        @extend .heartislove;
+    main{
+        clear: both;
+        @include positionzone($Color_Gris_light);
+        @include flexsimple(column, nowrap, flex-start,flex-start );
+
 
     }
 
+    .menu__header--{
+        width: 100%;
 
+        &alafrancaise{
+            @include headermenu(alafrancaise);
+        }
+        &lapalettedugout{
+            @include headermenu(lapalettedugout);
+        }
+        &lanoteenchantee{
+            @include headermenu(lanoteenchantee);
+        }
+        &ledelicedessens{
+            @include headermenu(ledelicedessens);
+        }
+    }   
+    .resto__title{
+        @include positionzone($Color_Gris_light);
+        @include flexsimple(row, nowrap,space-between, center);
+
+        border: 0px;
+        border-radius: 40px 40px 0 0;
+        margin-top: -50px;
+        z-index: 10;
+
+        h1{
+            margin : 25px auto 25px 15px;
+            font-size: 2em;
+        }
+
+        .card__description__love{
+            margin : 50px 35px auto 15px;
+            @include flexsimple(row, nowrap,flex-end, center);
+            @extend .heartislove;
+
+        }
+
+
+    }
 }
 
 /** Mise en page des blocs entrés / plats /desserts **/
 
-section{
-    @include flexsimple(column, wrap, center, center);
-    margin-bottom: 25px;
-    width: 100%
-}
+.resto__group__section{
+    width: 100%;
+    @include flexsimple(column, nowrap, flex-start, flex-start);
 
+    @include midmobilenotescreen{
+        @include flexsimple(row, wrap, center, flex-start);
+    }
+
+
+    section{
+        @include flexsimple(column, wrap, center, center);
+        margin-bottom: 25px;
+        width: 100%;
+        @include midmobilenotescreen{
+            width: 45%;
+        }
+    }
+}
     .section__title{
         @extend .titresectionmenu;
     }
@@ -100,6 +121,11 @@ section{
             &[class="article--#{$i}"]{
                 animation-delay: $articlemenu-delay * $i;
             }
+
+            @include midmobilenotescreen{
+                width: 100%;
+            }
+        
         }
     
 
