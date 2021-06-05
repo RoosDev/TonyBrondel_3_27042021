@@ -36,4 +36,6 @@ $articlemenu-delay: $articlemenu-duree/2;
 $articlemenu-nb_de_tour: 1 ; 
 
     /*... pour la coche verte des articles */
-$articlevalider-duree: 350ms;
+$articlevalider-duree: 400ms;
+$articlevalider-i-duree: $articlevalider-duree*2;
+

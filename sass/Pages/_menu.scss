@@ -117,6 +117,27 @@
         border-radius: 20px;
         background-color: #fff;
 
+        /* intégration de l'animation pour l'affichage progressif*/
+
+        cursor: pointer;
+        animation-name: articleaffichageprogressif;
+        animation-duration: $articlemenu-duree;
+        animation-fill-mode: both;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: $articlemenu-nb_de_tour;
+        animation-timing-function: linear;
+        @for $i from 1 through 15 {
+            &[class="article--#{$i}"]{
+                animation-delay: $articlemenu-delay * $i;
+            }
+
+            @include midmobilenotescreen{
+                width: 100%;
+            }
+        
+        }
+        /*  ça y est tout y est*/ 
+
         &:hover{
 
             .article__texte{
@@ -169,7 +190,7 @@
                 }
 
                 /**   les éléments pour l'animation**/ 
-                transition: width 600ms;
+                transition: width $articlevalider-duree;
 
                 
             }
@@ -206,7 +227,7 @@
                     i{
                         color: #fff;
                         transform:rotate(-360deg);
-                        transition: transform 800ms;
+                        transition: transform $articlevalider-i-duree;
                     }
                 }
 
@@ -214,7 +235,7 @@
                 transform: scaleX(0);
                 opacity: 0;
                 transform-origin: 100% 50%;
-                transition: all 600ms;
+                transition: all $articlevalider-duree;
             }
         }
     }

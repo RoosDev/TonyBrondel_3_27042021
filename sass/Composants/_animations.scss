@@ -9,7 +9,22 @@
 
     /** animation pour l'affichage progressif des articles  **/
 
-    @keyframes articlevalider {
+    @keyframes articleaffichageprogressif {
+        0%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(20px);
+            opacity: 0;
+    
+        }
+    }
+    
+            /** animation pour l'affichage de la coche de validation des articles  **/
+    
+    
+    @keyframes AjoutValider{
         0%{
             width: 0%;
             transform: scaleX(0);
@@ -20,20 +35,6 @@
             width : 20%;
             transform: scaleX(1);
             opacity: 1;
-    
-        }
-    }
-    
-        /** animation pour l'affichage de la coche de validation des articles  **/
-    
-    
-    @keyframes AjoutValider{
-        0%{
-    
-    
-        }
-        100%{
-    
     
         }
     }
