@@ -2,233 +2,211 @@
 /***               Le CSS de la page menu                     **/
 /***************************************************************/
 
-
 /** Mise en page général **/
 
-#containermenu{
+#containermenu {
+  @include flexsimple(column, nowrap, flex-start, flex-start);
+  margin: 0px;
+  width: 100%;
+
+  header #header__retour {
+    display: flex;
+    z-index: 15;
+  }
+
+  @include troppetitscreen {
+    display: none;
+  }
+
+  @include notescreen {
+    height: 100px;
+  }
+
+  main {
+    clear: both;
+    @include positionzone($Color_Gris_light);
     @include flexsimple(column, nowrap, flex-start, flex-start);
-    margin: 0px;
+  }
+
+  .menu__header-- {
     width: 100%;
 
-    header #header__retour{
-        display: flex;
-        z-index: 15;
+    &alafrancaise {
+      @include headermenu(alafrancaise);
+    }
+    &lapalettedugout {
+      @include headermenu(lapalettedugout);
+    }
+    &lanoteenchantee {
+      @include headermenu(lanoteenchantee);
+    }
+    &ledelicedessens {
+      @include headermenu(ledelicedessens);
+    }
+  }
+  .resto__title {
+    @include positionzone($Color_Gris_light);
+    @include flexsimple(row, nowrap, space-between, center);
+
+    border: 0px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -50px;
+    z-index: 10;
+
+    h1 {
+      margin: 25px auto 25px 15px;
+      font-size: 2em;
     }
 
-    @include troppetitscreen{
-        display: none;
-
+    .card__description__love {
+      margin: 50px 35px auto 15px;
+      @include flexsimple(row, nowrap, flex-end, center);
+      @extend .heartislove;
     }
-
-    @include notescreen{
-        height: 100px;
-
-    }
-    
-    main{
-        clear: both;
-        @include positionzone($Color_Gris_light);
-        @include flexsimple(column, nowrap, flex-start,flex-start );
-
-
-    }
-
-    .menu__header--{
-        width: 100%;
-
-        &alafrancaise{
-            @include headermenu(alafrancaise);
-        }
-        &lapalettedugout{
-            @include headermenu(lapalettedugout);
-        }
-        &lanoteenchantee{
-            @include headermenu(lanoteenchantee);
-        }
-        &ledelicedessens{
-            @include headermenu(ledelicedessens);
-        }
-    }   
-    .resto__title{
-        @include positionzone($Color_Gris_light);
-        @include flexsimple(row, nowrap,space-between, center);
-
-        border: 0px;
-        border-radius: 40px 40px 0 0;
-        margin-top: -50px;
-        z-index: 10;
-
-        h1{
-            margin : 25px auto 25px 15px;
-            font-size: 2em;
-        }
-
-        .card__description__love{
-            margin : 50px 35px auto 15px;
-            @include flexsimple(row, nowrap,flex-end, center);
-            @extend .heartislove;
-
-        }
-
-
-    }
+  }
 }
 
 /** Mise en page des blocs entrés / plats /desserts **/
 
-.resto__group__section{
+.resto__group__section {
+  width: 100%;
+  @include flexsimple(column, nowrap, flex-start, flex-start);
+
+  @include midmobilenotescreen {
+    @include flexsimple(row, wrap, center, flex-start);
+  }
+
+  section {
+    @include flexsimple(column, wrap, center, center);
+    margin-bottom: 25px;
     width: 100%;
-    @include flexsimple(column, nowrap, flex-start, flex-start);
-
-    @include midmobilenotescreen{
-        @include flexsimple(row, wrap, center, flex-start);
+    @include midmobilenotescreen {
+      width: 50%;
     }
-
-
-    section{
-        @include flexsimple(column, wrap, center, center);
-        margin-bottom: 25px;
-        width: 100%;
-        @include midmobilenotescreen{
-            width: 50%;
-        }
-    }
+  }
 }
-    .section__title{
-        @extend .titresectionmenu;
-    }
-
+.section__title {
+  @extend .titresectionmenu;
+}
 
 /** Mise en page et mise en forme de chaque produit **/
 
-.resto__group__article{
-    width: 80%;
-    @include midmobilenotescreen{
-        width: 95%;
+.resto__group__article {
+  width: 80%;
+  @include midmobilenotescreen {
+    width: 95%;
+  }
+
+  article {
+    @include flexsimple(row, nowrap, space-between, flex-start);
+    width: 100%;
+    min-width: 200px;
+    max-width: 450px;
+    height: 70px;
+    margin: 10px auto 10px auto;
+    border-radius: 20px;
+    background-color: #fff;
+
+    &:hover {
+      .article__texte {
+        width: 65%;
+        min-width: 170px;
+      }
+
+      .article__valider {
+        width: 70px;
+
+        transform: scaleX(1);
+        opacity: 1;
+
+        p {
+          i {
+            transform: rotate(0);
+          }
+        }
+      }
     }
 
-    article{
-        @include flexsimple(row, nowrap, space-between, flex-start);
-        width: 100%;
-        min-width: 200px;
-        max-width: 450px;
-        height : 70px;
-        margin : 10px auto 10px auto ;
-        border-radius: 20px;
+    .article__ {
+      &texte {
+        @include flexsimple(column, nowrap, flex-start, flex-start);
+        width: 80%;
+        min-width: 170px;
+        margin: auto 0 auto 10px;
+        line-height: 100%;
+
+        h4,
+        p {
+          width: 100%;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        h4 {
+          margin: 0px auto 3px 0px;
+        }
+
+        p {
+          margin: 3px auto 0px 0px;
+        }
+
+        /**   les éléments pour l'animation**/
+        transition: width $articlevalider-duree;
+      }
+      &price {
+        @include flexsimple(column, nowrap, flex-end, flex-end);
+        border-radius: 0 20px 20px 0;
+        width: 15%;
+        min-width: 50px;
+        height: 100%;
         background-color: #fff;
 
-        &:hover{
+        p {
+          width: 100%;
+          margin: auto auto 17px 0px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+      &valider {
+        @include flexsimple(row, nowrap, center, center);
+        width: 0%;
+        margin-right: 0px;
+        border-radius: 0 20px 20px 0;
+        height: 100%;
+        background-color: $Color_Marque_Tertiaire;
 
-            .article__texte{
-                width:65%;
-                min-width: 170px;
-            }
+        p {
+          width: 100%;
+          text-align: center;
+          font-size: 1.3em;
 
-            .article__valider{
-                width : 70px;
-                
-                transform: scaleX(1);
-                opacity: 1;
-
-                p{
-                    i{
-                        transform: rotate(0);
-
-                    }
-                }
-            }
+          i {
+            color: #fff;
+            transform: rotate(-360deg);
+            transition: transform $articlevalider-i-duree;
+          }
         }
 
-
-
-
-        .article__{
-
-
-            &texte{
-                @include flexsimple(column, nowrap, flex-start, flex-start);
-                width: 80%;
-                min-width: 170px;
-                margin: auto 0 auto 10px;
-                line-height: 100%;
-
-                h4, p{
-                    width: 100%;
-                    text-align: left;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
-                h4{
-                    margin: 0px auto 3px 0px;
-                }
-
-                p{
-                    margin: 3px auto 0px 0px;
-                }
-
-                /**   les éléments pour l'animation**/ 
-                transition: width $articlevalider-duree;
-
-                
-            }
-            &price{
-                @include flexsimple(column, nowrap, flex-end, flex-end);
-                border-radius: 0 20px 20px 0;
-                width : 15%;
-                min-width: 50px;
-                height: 100%;
-                background-color: #fff;
-
-                p{
-                    width: 100%;
-                    margin: auto auto 17px 0px;
-                    text-align: center;
-                    font-weight: bold;
-
-                }
-                
-            }
-            &valider{
-                @include flexsimple(row, nowrap, center, center);
-                width : 0%;
-                margin-right: 0px;
-                border-radius: 0 20px 20px 0;
-                height: 100%;
-                background-color: $Color_Marque_Tertiaire;
-
-                p{
-                    width: 100%;
-                    text-align: center;
-                    font-size: 1.3em;
-                    
-                    i{
-                        color: #fff;
-                        transform:rotate(-360deg);
-                        transition: transform $articlevalider-i-duree;
-                    }
-                }
-
-                /**   les éléments pour l'animation**/ 
-                transform: scaleX(0);
-                opacity: 0;
-                transform-origin: 100% 50%;
-                transition: all $articlevalider-duree;
-            }
-        }
+        /**   les éléments pour l'animation**/
+        transform: scaleX(0);
+        opacity: 0;
+        transform-origin: 100% 50%;
+        transition: all $articlevalider-duree;
+      }
     }
+  }
 }
 
+/** Mise en place du bouton COMMANDER **/
 
-    /** Mise en place du bouton COMMANDER **/
+#menu_order {
+  @include flexsimple(row, nowrap, center, center);
+  margin: 25px auto 100px auto;
 
-    #menu_order{
-        @include flexsimple(row, nowrap, center, center);
-        margin : 25px auto 100px auto;
-
-        @include midmobilenotescreen{
-            margin: 10px auto 50px auto ;
-        }
-    }
-
+  @include midmobilenotescreen {
+    margin: 10px auto 50px auto;
+  }
+}

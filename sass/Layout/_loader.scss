@@ -1,67 +1,66 @@
-#container{
-    clear: both;
-    position: absolute;
-    @include flexsimple(column, nowrap, flex-start, flex-start);
+#container {
+  clear: both;
+  position: absolute;
+  @include flexsimple(column, nowrap, flex-start, flex-start);
+  margin: 0px;
+  z-index: 1;
+  animation-name: container;
+  animation-duration: 0s;
+  animation-delay: $loading-site;
+  animation-fill-mode: both;
+  align-self: flex-start;
+}
+
+@keyframes container {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#loader {
+  @include flexsimple(column, nowrap, center, center);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  // background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(
+      217deg,
+      $Color_Marque_Primaire,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(
+      127deg,
+      $Color_Marque_Secondaire,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(336deg, $Color_Marque_Tertiaire, rgba(255, 255, 255, 0) 60%);
+  animation-name: disparitionzen;
+  animation-duration: $loader-dureefondu;
+  animation-delay: $loader-dureetotale-fondu;
+  animation-fill-mode: both;
+
+  @include troppetitscreen {
+    min-height: 500px;
+  }
+
+  .fa-utensils {
+    font-size: 15em;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100%;
+    align-self: center;
     margin: 0px;
-    z-index: 1;   
-    animation-name: container ;
-    animation-duration:  0s;
-    animation-delay: $loading-site;
-    animation-fill-mode:  both;
-    align-self: flex-start;
-
+    color: #fff;
+    transform: scale(0) translateX(0%);
+    animation-name: spinloader;
+    animation-duration: $loader-duree;
+    animation-delay: $loader-delay;
+    animation-iteration-count: $loader_nb_de_tour;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    z-index: 0;
+  }
 }
-
-@keyframes container{
-    0% {
-        transform: translateX(-500%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-#loader{
-    @include flexsimple(column, nowrap, center, center);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    // background-color: rgba(255, 255, 255, 1);
-    background:     
-            linear-gradient(217deg, $Color_Marque_Primaire, rgba(255,255,255,0) 40%),
-            linear-gradient(127deg, $Color_Marque_Secondaire, rgba(255,255,255,0) 40%),
-            linear-gradient(336deg, $Color_Marque_Tertiaire, rgba(255,255,255,0) 60%);    
-    animation-name: disparitionzen;
-    animation-duration: $loader-dureefondu;
-    animation-delay: $loader-dureetotale-fondu;
-    animation-fill-mode:  both ;
-
-    @include troppetitscreen{
-        min-height: 500px;
-    }
-
-
-
-    
-    .fa-utensils{
-        font-size: 15em;
-        text-align: center;
-        font-weight: bold;
-        line-height: 100%;
-        align-self: center;
-        margin : 0px;
-        color: #fff;
-        transform: scale(0) translateX(0%);
-        animation-name: spinloader ;
-        animation-duration:  $loader-duree;
-        animation-delay: $loader-delay;
-        animation-iteration-count: $loader_nb_de_tour;
-        animation-fill-mode:  both ;
-        animation-timing-function:  ease-in-out;
-        z-index: 0;
-    
-    }
-
-}
-
