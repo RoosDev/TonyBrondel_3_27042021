@@ -26,9 +26,10 @@ $Pic_Background_resto4 : "..";
     /*... pour le loader */
 $loader-duree: 1350ms;
 $loader-delay : 150ms;
-$loader_nb_de_tour:2;
-$loading-site : ($loader-duree*$loader_nb_de_tour) + $loader-delay*2;
-
+$loader_nb_de_tour: 2;
+$loader-dureefondu: 600ms;
+$loading-site : ($loader-duree*$loader_nb_de_tour) + $loader-dureefondu   ;
+$loader-dureetotale-fondu: ($loader-duree*$loader_nb_de_tour) + $loader-delay;
 
     /*... pour le l'affichage des articles du menu */
 $articlemenu-duree :650ms;
@@ -38,4 +39,6 @@ $articlemenu-nb_de_tour: 1 ;
     /*... pour la coche verte des articles */
 $articlevalider-duree: 400ms;
 $articlevalider-i-duree: $articlevalider-duree*2;
+$articlevalider-delay: $articlemenu-duree/2;
+$articlevalider-nb_de_tour: 1 ; 
 

@@ -117,27 +117,6 @@
         border-radius: 20px;
         background-color: #fff;
 
-        /* intégration de l'animation pour l'affichage progressif*/
-
-        cursor: pointer;
-        animation-name: articleaffichageprogressif;
-        animation-duration: $articlemenu-duree;
-        animation-fill-mode: both;
-        animation-direction: alternate-reverse;
-        animation-iteration-count: $articlemenu-nb_de_tour;
-        animation-timing-function: linear;
-        @for $i from 1 through 15 {
-            &[class="article--#{$i}"]{
-                animation-delay: $articlemenu-delay * $i;
-            }
-
-            @include midmobilenotescreen{
-                width: 100%;
-            }
-        
-        }
-        /*  ça y est tout y est*/ 
-
         &:hover{
 
             .article__texte{
