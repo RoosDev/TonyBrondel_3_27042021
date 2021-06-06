@@ -1,5 +1,66 @@
 /**------------------------------------------------**/
-/**   Les animation des pages menu ci-dessous      **/
+/**   Les animation du loader                      **/
+/**------------------------------------------------**/
+
+/**   Effet de fondu pour la disparition du fond du loader**/
+
+@keyframes disparitionzen {
+    From{
+        opacity: 1;
+    }
+
+    To{
+        opacity: 0;
+
+    }
+}
+
+
+
+/** Animation des ustensils qui tournent durant le loader **/
+
+@keyframes spinloader{
+    0%{
+        transform:scale(0.1) translateX(0%) ;
+        z-index: 9999;
+        opacity: 0;
+    }
+    
+    20% {
+        color: $Color_Marque_Primaire;
+        transition: all 1s;
+        transform:scale(0.5) translateX(-110%);
+        opacity: 1;
+    }
+
+    50%{
+        color: $Color_Marque_Secondaire;
+        transition: all 1s;
+        transform: scale(1) translateX(0%);
+        opacity: 1;
+    }
+
+    80%{
+        color: $Color_Marque_Tertiaire;
+        transform: scale(0.5) translateX(110%);
+        opacity: 1;
+    }
+
+    100%{
+        color: #fff;
+        transform: scale(0.1) translateX(0%);
+        z-index: 0;
+        opacity: 0;
+    }
+
+}
+
+
+
+
+
+/**------------------------------------------------**/
+/**   Les animation des pages menu                 **/
 /**------------------------------------------------**/
 
 
