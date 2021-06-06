@@ -1,0 +1,113 @@
+/**------------------------------------------------**/
+/**   Les animation du loader                      **/
+/**------------------------------------------------**/
+
+/**   Effet de fondu pour la disparition du fond du loader**/
+
+@keyframes disparitionzen {
+    From{
+        opacity: 1;
+    }
+
+    To{
+        opacity: 0;
+
+    }
+}
+
+
+
+/** Animation des ustensils qui tournent durant le loader **/
+
+@keyframes spinloader{
+    0%{
+        transform:scale(0.1) translateX(0%) ;
+        z-index: 9999;
+        opacity: 0;
+    }
+    
+    20% {
+        color: $Color_Marque_Primaire;
+        transition: all 1s;
+        transform:scale(0.5) translateX(-110%);
+        opacity: 1;
+    }
+
+    50%{
+        color: $Color_Marque_Secondaire;
+        transition: all 1s;
+        transform: scale(1) translateX(0%);
+        opacity: 1;
+    }
+
+    80%{
+        color: $Color_Marque_Tertiaire;
+        transform: scale(0.5) translateX(110%);
+        opacity: 1;
+    }
+
+    100%{
+        color: #fff;
+        transform: scale(0.1) translateX(0%);
+        z-index: 0;
+        opacity: 0;
+    }
+
+}
+
+
+
+
+
+/**------------------------------------------------**/
+/**   Les animation des pages menu                 **/
+/**------------------------------------------------**/
+
+
+    /** CSS pour le HOVER des articles V  **/
+
+    
+
+    /** animation pour l'affichage progressif des articles  **/
+
+    @keyframes articleaffichageprogressif {
+        0%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(20px);
+            opacity: 0;
+    
+        }
+    }
+    
+            /** animation pour l'affichage de la coche de validation des articles  **/
+    
+    
+    @keyframes AjoutValider{
+        0%{
+            width: 0%;
+            transform: scaleX(0);
+            opacity: 0;
+    
+        }
+        100%{
+            width : 70px;
+            transform: scaleX(1);
+            opacity: 1;
+    
+        }
+    }
+/****   Lignes de code a insérer dans _menu.scss dans le 
+:hover .article_valider {} pour migrer en version keyframe 
+
+                animation-name: AjoutValider;
+                animation-duration: $articlevalider-duree;
+                animation-fill-mode: both;
+                animation-direction: alternate;
+                animation-iteration-count: $articlevalider-nb_de_tour;
+
+
+
+                **/
