@@ -122,6 +122,7 @@ $photobackgroundheader:(
         background-image: url(map-get($image, imgbckgnd));
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: auto;
         width: 100%;
         align-items: center;
     }

@@ -268,26 +268,3 @@ aside{
                 }
             }
 
-
-
-/**    Mise en forme de la résolution trop petite **/
-
-#aside__resolutiontroppetite{
-    display: none;
-
-    @include troppetitscreen{
-        display: inline-block;
-
-    }
-
-    h2{
-        @include troppetitscreen{
-            font-size: 1.0em;
-    
-        }
-    
-        }
-
-
-}
-

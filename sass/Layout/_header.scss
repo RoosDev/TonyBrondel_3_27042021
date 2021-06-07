@@ -46,7 +46,10 @@ header{
         }
 
         @include tabletscreen{
-            width: 15%;
+            width: 25%;
+            max-width: 215px;
+            
+
         }
 
         img{
@@ -55,12 +58,10 @@ header{
             z-index: 10;
             transition: all 1s;
 
-            @include notescreen{
-                width: 100%;
-                max-width: 250px;
-                
-
+            @include tabletscreen{
+            width: 100%;
             }
+
         }
 
 
