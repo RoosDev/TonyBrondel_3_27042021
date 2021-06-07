@@ -100,10 +100,7 @@
       @include midmobilenotescreen {
         margin-bottom: 40px;
         background-color: rgba($Color_Gris_light, 0.8);
-
       }
-
-
 
       @include tabletscreen{
         max-width: 1024px;  
@@ -114,7 +111,7 @@
         position: relative;
         max-width: none;
         width: 75%;
-        margin : 50px auto 0px auto;
+        margin : 50px auto 50px auto;
         background-color: rgba($Color_Gris_light, 0.5);
         border-radius: 40px 40px 40px 40px;
 
