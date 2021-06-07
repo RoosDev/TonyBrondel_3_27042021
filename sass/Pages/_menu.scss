@@ -88,7 +88,7 @@
     .menu__contain{
       @include flexsimple(column, nowrap, center, center);
       @include positionzone($Color_Gris_light);
-      margin : -50px auto 20px auto;
+      margin : -50px auto 50px auto;
       border: 0px;
       border-radius: 40px 40px 0 0;
       z-index: 11;
