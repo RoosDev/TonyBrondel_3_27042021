@@ -106,8 +106,25 @@ $photobackgroundheader:(
     border : 0px;
     position: relative;
     z-index: 0;
-    @include flexsimple(row, nowrap, flex-end, flex-start)
+    @include flexsimple(row, nowrap, flex-end, flex-start);
 
+    @include tabletscreen{
+        min-height: 400px;
+    }
+  
+}
+
+
+@mixin backgroundmenulaptop($nomresto){
+    
+    @include largescreen {
+        $image:map-get($photobackgroundheader, $nomresto);
+        background-image: url(map-get($image, imgbckgnd));
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        align-items: center;
+    }
 }
 
         /* maps+ mixin pour nouveau resto ou pas  ;) */ 

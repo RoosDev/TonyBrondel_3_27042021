@@ -2,31 +2,40 @@
 /***               Le CSS de la home d'accueil                **/
 /***************************************************************/
 
+#home{
 
-
-body main{
-    clear: both;
-    @include positionzone($Color_Gris_Superlight);
-
-    @include troppetitscreen{
-        display: none;
-    }
-
-    @include notescreen{
+    #container{
         width: 100%;
-        margin-top: 300px;
+        
+        @include notescreen{
+            @include flexsimple(row, wrap, flex-start, flex-start);
+    
+        }
     }
+    
+    main{
+        clear: both;
+        @include positionzone($Color_Gris_Superlight);
 
-    @include tabletscreen{
-        margin-top: auto;
-        margin-left: 30%;
-        width: 70%;
-        background-color: transparent;
-        z-index: 15;
+        @include troppetitscreen{
+            display: none;
+        }
+
+        @include notescreen{
+            width: 100%;
+            margin-top: 300px;
+        }
+
+        @include tabletscreen{
+            margin-top: auto;
+            margin-left: 30%;
+            width: 70%;
+            background-color: transparent;
+            z-index: 15;
+
+        }
 
     }
-
-}
     .main__title{ 
         @include tabletscreen{
         margin-left: 15px;
@@ -134,4 +143,6 @@ body main{
             }
     }
 
+
+}
 

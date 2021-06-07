@@ -6,11 +6,3 @@ body{
     width: 100%;
 }
 
-body #container{
-    width: 100%;
-
-    @include notescreen{
-        @include flexsimple(row, wrap, flex-start, flex-start);
-
-    }
-}

@@ -1,4 +1,4 @@
-#container {
+#home #container {
   clear: both;
   position: absolute;
   @include flexsimple(column, nowrap, flex-start, flex-start);

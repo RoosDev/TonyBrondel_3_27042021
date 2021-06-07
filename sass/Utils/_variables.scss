@@ -22,9 +22,9 @@ $Pic_Background_resto4: "..";
 
 /*... pour le loader */
 $loader-duree: 1350ms;
-$loader-delay: 150ms;
+$loader-delay: 0ms;
 $loader_nb_de_tour: 2;
-$loader-dureefondu: 600ms;
+$loader-dureefondu: 00ms;
 $loading-site: ($loader-duree * $loader_nb_de_tour) + $loader-dureefondu;
 $loader-dureetotale-fondu: ($loader-duree * $loader_nb_de_tour) + $loader-delay;
 
