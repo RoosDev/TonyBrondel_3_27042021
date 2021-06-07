@@ -43,9 +43,9 @@
         position: absolute;
         transform-origin: center center;
         background: linear-gradient($Color_Marque_Primaire, $Color_Marque_Secondaire );
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        background-clip: text;
         transform: scale(0);
         opacity: 0;
         transition: all 350ms;
