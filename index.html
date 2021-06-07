@@ -1,219 +1,258 @@
 <!DOCTYPE html>
 <html lang="fr-fr">
-    <head>
-        <!-- En-tête de la page -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="images/logo/omffavicon.ico" />
-        <!-- <link rel="stylesheet" href="css/style.css" />   -->
-        <link rel="stylesheet" href="cssprefixer/style.css" /> 
-        <title>Oh my food</title>
-        <script src="https://kit.fontawesome.com/b384501697.js" crossorigin="anonymous" ></script>
-    </head>
-    <body id="home">
-        <div id="loader">
-            <i class="fas fa-utensils"></i>
+  <head>
+    <!-- En-tête de la page -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/logo/omffavicon.ico"
+    />
+    <link rel="stylesheet" href="css/style.css" />  
+    <!-- <link rel="stylesheet" href="cssprefixer/style.css" /> -->
+    <title>Oh my food</title>
+    <script
+      src="https://kit.fontawesome.com/b384501697.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="home">
+    <div id="loader">
+      <i class="fas fa-utensils"></i>
+    </div>
+    <div id="container">
+      <header>
+        <div id="header__retour">
+          <i class="fas fa-arrow-left"></i>
         </div>
-        <div id="container">
-            <header>
-                <div id="header__retour">
-                    <i class="fas fa-arrow-left"></i>
-                </div>
-                <div id="header__logo">
-                    <img src="./images/logo/ohmyfood.png" alt="Oh my food !!!!!!!"/>
-                </div>
-            </header>
-    <!--*****************************************************************************************-->
-    <!--                   En dessous, la surprise avec les écrans trop petits                   -->
-    <!--*****************************************************************************************-->
-            <div id="resolutiontroppetite">
-                <h2>
-                    Nous sommes ravis de votre visite,<br />cependant la résolution de votre
-                    écran est trop petite. Veuillez modifier la résolution ou changer de
-                    device pour pouvoir manger et vous régaler.<br />
-                    Sinon ... pas de bras ... pas de chocolat <br />
-                    Merci et à très vite.
-                </h2>
+        <div id="header__logo">
+          <img src="./images/logo/ohmyfood.png" alt="Oh my food !!!!!!!" />
+        </div>
+      </header>
+      <!--*****************************************************************************************-->
+      <!--                   En dessous, la surprise avec les écrans trop petits                   -->
+      <!--*****************************************************************************************-->
+      <div id="resolutiontroppetite">
+        <h2>
+          Nous sommes ravis de votre visite,<br />cependant la résolution de
+          votre écran est trop petite. Veuillez modifier la résolution ou
+          changer de device pour pouvoir manger et vous régaler.<br />
+          Sinon ... pas de bras ... pas de chocolat <br />
+          Merci et à très vite.
+        </h2>
+      </div>
+      <!--*****************************************************************************************-->
+      <!--                   Surprise terminée - le sérieux reprend                                -->
+      <!--*****************************************************************************************-->
+      <aside>
+        <div id="aside__localisation">
+          <div class="aside__localisation_ico">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="aside__localisation_lieu">
+            <p>Paris, Belleville</p>
+          </div>
+        </div>
+        <div class="aside__motivation">
+          <div class="aside__motivation__slogan">
+            <h2>Réservez le menu qui vous convient</h2>
+          </div>
+          <div class="aside__motivation__detail">
+            <p>
+              Découvrez des restaurants d'exception sélectionnés par nos soins.
+            </p>
+          </div>
+          <div class="aside__motivation__button">
+            <form>
+              <button
+                class="aside__motivation__wouahoubouton"
+                type="submit"
+                formaction="#"
+              >
+                Explorer nos restaurants
+              </button>
+            </form>
+          </div>
+        </div>
+        <div id="aside__Fonctionnement">
+          <div class="aside__Fonctionnement__title">
+            <h2>Fonctionnement</h2>
+          </div>
+          <div class="aside__Fonctionnement__etapes">
+            <div class="aside__etapes__no1">
+              <div class="aside__etapes__number">
+                <p>1</p>
+              </div>
+              <div class="aside__etapes__icone1">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="aside__etapes__text">
+                <p>Choisissez un restaurant</p>
+              </div>
             </div>
-<!--*****************************************************************************************-->
-<!--                   Surprise terminée - le sérieux reprend                                -->
-<!--*****************************************************************************************-->
-            <aside>
-                <div id="aside__localisation">
-                    <div class="aside__localisation_ico">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="aside__localisation_lieu">
-                        <p>Paris, Belleville</p>
-                    </div>
-                </div>
-                <div class="aside__motivation">
-                    <div class="aside__motivation__slogan">
-                        <h2>Réservez le menu qui vous convient</h2>
-                    </div>
-                    <div class="aside__motivation__detail">
-                        <p>Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
-                    </div>
-                    <div class="aside__motivation__button">
-                        <form>
-                            <button class="aside__motivation__wouahoubouton" type="submit" formaction="#">Explorer nos restaurants</button>
-                        </form>
-                    </div>
-                </div>
-                <div id="aside__Fonctionnement">
-                    <div class="aside__Fonctionnement__title">
-                        <h2>Fonctionnement</h2>
-                    </div>
-                    <div class="aside__Fonctionnement__etapes">
-                        <div class="aside__etapes__no1">
-                            <div class="aside__etapes__number">
-                                <p>1</p>
-                            </div>
-                            <div class="aside__etapes__icone1">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="aside__etapes__text">
-                                <p>Choisissez un restaurant</p>
-                            </div>
-                        </div>
-                        <div class="aside__etapes__no2">
-                            <div class="aside__etapes__number">
-                                <p>2</p>
-                            </div>
-                            <div class="aside__etapes__icone2">
-                                <i class="fas fa-list-ul"></i>
-                            </div>
-                            <div class="aside__etapes__text">
-                                <p>Composez votre menu</p>
-                            </div>
-                        </div>
-                        <div class="aside__etapes__no3">
-                            <div class="aside__etapes__number">
-                                <p>3</p>
-                            </div>
-                            <div class="aside__etapes__icone3">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="aside__etapes__text">
-                                <p>Dégustez au restaurant</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </aside>
-            <main>
-                <div class="main__title">
-                    <h2>Restaurants</h2>
-                </div>
-                <div class="main__global__card">
-                    <!-- le premier resto -->
-                    <div class="main__card">
-                        <a href="./pages/menu_lapalettedugout.html" class="card__header1">
-                            <div class="card__header_new">
-                                <p class="Pnew1">Nouveau</p>
-                            </div>
-                        </a>
-                        
-                        <div class="card__description">
-                            <a href="./pages/menu_lapalettedugout.html" class="card__description__text">
-                                <div class="card__text__title">
-                                    <h4>La palette du goût</h4>
-                                    <p>Ménilmontant</p>
-                                </div>
-                            </a>
-                            <div class="card__description__love">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- le second resto -->
-
-                    <div class="main__card">
-                        <a href="./pages/menu_lanoteenchantee.html" class="card__header2">
-                            <div class="card__header_new">
-                                <p class="Pnew2">Nouveau</p>
-                            </div>
-                        </a>
-                        <div class="card__description">
-                            <a href="./pages/menu_lanoteenchantee.html" class="card__description__text">
-                                <div class="card__text__title">
-                                    <h4>La note enchantée</h4>
-                                    <p>Charonne</p>
-                                </div>
-                            </a>
-                            <div class="card__description__love">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- le second resto -->
-
-                    <div class="main__card">
-                        <a href="./pages/menu_alafrancaise.html" class="card__header3">
-                            <div class="card__header_new">
-                                <p class="Pnew3">Nouveau</p>
-                            </div>
-                        </a>
-                        <div class="card__description">
-                            <a href="./pages/menu_alafrancaise.html" class="card__description__text">
-                                <div class="card__text__title">
-                                    <h4>&Agrave; la française</h4>
-                                    <p>Cité Rouge</p>
-                                </div>
-                            </a>
-                            <div class="card__description__love">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- le quatrieme resto -->
-
-                    <div class="main__card">
-                        <a href="./pages/menu_ledelicedessens.html" class="card__header4">
-                            <div class="card__header_new">
-                                <p class="Pnew4">Nouveau</p>
-                            </div>
-                        </a>
-                        <div class="card__description">
-                            <a href="./pages/menu_ledelicedessens.html" class="card__description__text">
-                                <div class="card__text__title">
-                                    <h4>Le délice des sens</h4>
-                                    <p>Folie-Méricourt</p>
-                                </div>
-                            </a>
-                            <div class="card__description__love">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </main>
-            <footer>
-                <div class="footer__links__title">
-                    <h1>ohmyfood</h1>
-                </div>
-                <ul class="footer__links__links">
-                    <li class="footer__links__complet">
-                        <span class="footer__links__icone"><i class="fas fa-utensils"></i></span><span class="footer__links__text"><a href="#">Proposer un restaurant</a></span>
-                    </li>
-                    <li class="footer__links__complet">
-                        <span class="footer__links__icone"><i class="fas fa-hands-helping"></i></span><span class="footer__links__text"><a href="#">Devenir partenaire</a></span>
-                    </li>
-                    <li class="footer__links__simple">
-                        <span class="footer__links__text"><a href="#">Mentions légales</a></span>
-                    </li>
-                    <li class="footer__links__simple">
-                        <span class="footer__links__text"><a href="mailto:dev@difiworld.com?subject=Question">Contact</a></span>
-                    </li>
-                </ul>
-            </footer>
-
+            <div class="aside__etapes__no2">
+              <div class="aside__etapes__number">
+                <p>2</p>
+              </div>
+              <div class="aside__etapes__icone2">
+                <i class="fas fa-list-ul"></i>
+              </div>
+              <div class="aside__etapes__text">
+                <p>Composez votre menu</p>
+              </div>
+            </div>
+            <div class="aside__etapes__no3">
+              <div class="aside__etapes__number">
+                <p>3</p>
+              </div>
+              <div class="aside__etapes__icone3">
+                <i class="fas fa-store"></i>
+              </div>
+              <div class="aside__etapes__text">
+                <p>Dégustez au restaurant</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </aside>
+      <main>
+        <div class="main__title">
+          <h2>Restaurants</h2>
+        </div>
+        <div class="main__global__card">
+          <!-- le premier resto -->
+          <div class="main__card">
+            <a href="./pages/menu_lapalettedugout.html" class="card__header1">
+              <div class="card__header_new">
+                <p class="Pnew1">Nouveau</p>
+              </div>
+            </a>
+
+            <div class="card__description">
+              <a
+                href="./pages/menu_lapalettedugout.html"
+                class="card__description__text"
+              >
+                <div class="card__text__title">
+                  <h4>La palette du goût</h4>
+                  <p>Ménilmontant</p>
+                </div>
+              </a>
+              <div class="card__description__love">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- le second resto -->
+
+          <div class="main__card">
+            <a href="./pages/menu_lanoteenchantee.html" class="card__header2">
+              <div class="card__header_new">
+                <p class="Pnew2">Nouveau</p>
+              </div>
+            </a>
+            <div class="card__description">
+              <a
+                href="./pages/menu_lanoteenchantee.html"
+                class="card__description__text"
+              >
+                <div class="card__text__title">
+                  <h4>La note enchantée</h4>
+                  <p>Charonne</p>
+                </div>
+              </a>
+              <div class="card__description__love">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <!-- le second resto -->
+
+          <div class="main__card">
+            <a href="./pages/menu_alafrancaise.html" class="card__header3">
+              <div class="card__header_new">
+                <p class="Pnew3">Nouveau</p>
+              </div>
+            </a>
+            <div class="card__description">
+              <a
+                href="./pages/menu_alafrancaise.html"
+                class="card__description__text"
+              >
+                <div class="card__text__title">
+                  <h4>&Agrave; la française</h4>
+                  <p>Cité Rouge</p>
+                </div>
+              </a>
+              <div class="card__description__love">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <!-- le quatrieme resto -->
+
+          <div class="main__card">
+            <a href="./pages/menu_ledelicedessens.html" class="card__header4">
+              <div class="card__header_new">
+                <p class="Pnew4">Nouveau</p>
+              </div>
+            </a>
+            <div class="card__description">
+              <a
+                href="./pages/menu_ledelicedessens.html"
+                class="card__description__text"
+              >
+                <div class="card__text__title">
+                  <h4>Le délice des sens</h4>
+                  <p>Folie-Méricourt</p>
+                </div>
+              </a>
+              <div class="card__description__love">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer__links__title">
+          <h1>ohmyfood</h1>
+        </div>
+        <ul class="footer__links__links">
+          <li class="footer__links__complet">
+            <span class="footer__links__icone"
+              ><i class="fas fa-utensils"></i></span
+            ><span class="footer__links__text"
+              ><a href="#">Proposer un restaurant</a></span
+            >
+          </li>
+          <li class="footer__links__complet">
+            <span class="footer__links__icone"
+              ><i class="fas fa-hands-helping"></i></span
+            ><span class="footer__links__text"
+              ><a href="#">Devenir partenaire</a></span
+            >
+          </li>
+          <li class="footer__links__simple">
+            <span class="footer__links__text"
+              ><a href="#">Mentions légales</a></span
+            >
+          </li>
+          <li class="footer__links__simple">
+            <span class="footer__links__text"
+              ><a href="mailto:dev@difiworld.com?subject=Question"
+                >Contact</a
+              ></span
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
