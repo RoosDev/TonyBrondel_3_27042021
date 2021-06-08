@@ -43,12 +43,11 @@
         position: absolute;
         transform-origin: center center;
         background: linear-gradient($Color_Marque_Primaire, $Color_Marque_Secondaire );
-        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         transform: scale(0);
         opacity: 0;
-        transition: all 350ms;
+        transition: all $love_kiff_transition;
             &:hover, :focus, :active{
                 transform: scale(1);
                 opacity: 1;

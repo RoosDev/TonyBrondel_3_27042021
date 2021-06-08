@@ -44,8 +44,6 @@
 /**   Les animation des pages menu                 **/
 /**------------------------------------------------**/
 
-/** CSS pour le HOVER des articles V  **/
-
 /** animation pour l'affichage progressif des articles  **/
 
 @keyframes articleaffichageprogressif {
@@ -59,29 +57,3 @@
   }
 }
 
-/** animation pour l'affichage de la coche de validation des articles  **/
-
-@keyframes AjoutValider {
-  0% {
-    width: 0%;
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  100% {
-    width: 70px;
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-/****   Lignes de code a insérer dans _menu.scss dans le 
-:hover .article_valider {} pour migrer en version keyframe 
-
-                animation-name: AjoutValider;
-                animation-duration: $articlevalider-duree;
-                animation-fill-mode: both;
-                animation-direction: alternate;
-                animation-iteration-count: $articlevalider-nb_de_tour;
-
-
-
-                **/

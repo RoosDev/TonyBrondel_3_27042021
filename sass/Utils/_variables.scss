@@ -24,9 +24,7 @@ $Pic_Background_resto4: "..";
 $loader-duree: 1350ms;
 $loader-delay: 0ms;
 $loader_nb_de_tour: 2;
-$loader-dureefondu: 00ms;
-$loading-site: ($loader-duree * $loader_nb_de_tour) + $loader-dureefondu;
-$loader-dureetotale-fondu: ($loader-duree * $loader_nb_de_tour) + $loader-delay;
+$loading-site: ($loader-duree * $loader_nb_de_tour) + $loader-delay;
 
 /*... pour le l'affichage des articles du menu */
 $articlemenu-duree: 650ms;
@@ -38,3 +36,7 @@ $articlevalider-duree: 400ms;
 $articlevalider-i-duree: $articlevalider-duree * 2;
 $articlevalider-delay: $articlemenu-duree/2;
 $articlevalider-nb_de_tour: 1;
+
+/*... pour le temps de transformation du coeur */
+
+$love_kiff_transition : 350ms;
