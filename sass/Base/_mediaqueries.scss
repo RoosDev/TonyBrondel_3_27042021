@@ -1,43 +1,43 @@
-$breakpoint:(
-    toutpetit: 340px,
-    mobile : 640px,
-    notephone : 820px,
-    tablet : 1024px,
-    laptop : 1200px
-); 
+$breakpoint: (
+  toutpetit: 340px,
+  mobile: 640px,
+  notephone: 820px,
+  tablet: 1024px,
+  laptop: 1200px,
+);
 
 /**** Les mixin des media queries ****/
 
-@mixin troppetitscreen{
-    @media only screen and (min-width:0px) and (max-width:map-get($breakpoint , toutpetit )){
-        @content
-    }
-};
+@mixin troppetitscreen {
+  @media only screen and (min-width: 0px) and (max-width: map-get($breakpoint , toutpetit )) {
+    @content;
+  }
+}
 
 /* pas de breakpoint sur un format type "mobile screen" car le dev de base est au format mobile */
 /* donc sont prévu des breakpoint pour les résolutions en dessous et au dessus ;) */
 /* donc cela concerne les résolutions entre 340 et 640 px */
 
-@mixin midmobilenotescreen{
-    @media only screen and (min-width:map-get($breakpoint , mobile )){
-        @content
-    }
-};
+@mixin midmobilenotescreen {
+  @media only screen and (min-width: map-get($breakpoint , mobile )) {
+    @content;
+  }
+}
 
-@mixin notescreen{
-    @media only screen and (min-width:map-get($breakpoint , notephone )){
-        @content
-    }
-};
+@mixin notescreen {
+  @media only screen and (min-width: map-get($breakpoint , notephone )) {
+    @content;
+  }
+}
 
-@mixin tabletscreen{
-    @media only screen and (min-width:map-get($breakpoint , tablet )){
-        @content
-    }
-};
+@mixin tabletscreen {
+  @media only screen and (min-width: map-get($breakpoint , tablet )) {
+    @content;
+  }
+}
 
-@mixin largescreen{
-    @media only screen and (min-width:map-get($breakpoint , laptop )) {
-        @content
-    }
-};
+@mixin largescreen {
+  @media only screen and (min-width: map-get($breakpoint , laptop )) {
+    @content;
+  }
+} ;

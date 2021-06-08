@@ -2,272 +2,241 @@
 /***         Le CSS du aside    ----    Fonctionnement        **/
 /***************************************************************/
 
-aside{
-    clear: both;
-    @include positionzone(#fff);
-    @include flexsimple(column, nowrap, flex-start, flex-start);
-    z-index: 0;
+aside {
+  clear: both;
+  @include positionzone(#fff);
+  @include flexsimple(column, nowrap, flex-start, flex-start);
+  z-index: 0;
 
-    @include midmobilenotescreen{
-        width: 100%;
-        flex-flow: row wrap;
-    }
-@include notescreen{
-        margin-top: 0px;
-        position: absolute;
-        background-color: transparent;
-        z-index: 10;
-    }
-
-}
-
-#aside__localisation{
+  @include midmobilenotescreen {
     width: 100%;
-    margin: 0px;
-    @include flexsimple(row, nowrap, flex-start, flex-start);
-    background-color: $Color_Gris_light;
-
-    @include troppetitscreen{
-        display: none;
-    }
-
-    @include notescreen{
-        width: 17%;
-        border-radius: 0 0 0 40px;
-        margin: auto 0 40px auto;
-    }
-
-    @include tabletscreen{
-        order: 2;
-        width: 15%;
-        margin-top: 0px;
-
-    }
+    flex-flow: row wrap;
+  }
+  @include notescreen {
+    margin-top: 0px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 10;
+  }
 }
 
-    .aside__localisation_ico{
-        @include coloriconawesome(rgb(0, 0, 0), 15px);
-        margin: auto 0px auto auto;
+#aside__localisation {
+  width: 100%;
+  margin: 0px;
+  @include flexsimple(row, nowrap, flex-start, flex-start);
+  background-color: $Color_Gris_light;
 
-        @include notescreen{
-            margin-left : 15px;
-        }
+  @include troppetitscreen {
+    display: none;
+  }
+
+  @include notescreen {
+    width: 17%;
+    border-radius: 0 0 0 40px;
+    margin: auto 0 40px auto;
+  }
+
+  @include tabletscreen {
+    order: 2;
+    width: 15%;
+    margin-top: 0px;
+  }
+}
+
+.aside__localisation_ico {
+  @include coloriconawesome(rgb(0, 0, 0), 15px);
+  margin: auto 0px auto auto;
+
+  @include notescreen {
+    margin-left: 15px;
+  }
+}
+
+.aside__localisation_lieu {
+  display: inline-block;
+  margin: auto;
+  margin-left: 10px;
+  p {
+    @include notescreen {
+      text-align: center;
     }
+  }
+}
 
-    .aside__localisation_lieu{
-        display: inline-block;
-        margin: auto;
-        margin-left : 10px;
-        p{
-            @include notescreen{
-                text-align: center;
-            }
-        }
-    }
+.aside__motivation {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $Color_Gris_Superlight;
 
-    .aside__motivation{
-        width: 100%;
-        margin: 0 auto 0 auto;
-        display: flex;
-        flex-flow: column nowrap;
-        background-color: $Color_Gris_Superlight;
-        
+  @include troppetitscreen {
+    display: none;
+  }
 
-        @include troppetitscreen{
-            display: none;
-    
-        }
+  @include midmobilenotescreen {
+    width: 50%;
+    margin: 0px;
+    background-color: transparent;
+  }
 
-        @include midmobilenotescreen{
-            width: 50%;
-            margin: 0px;
-            background-color: transparent;
-        }
+  @include notescreen {
+    align-self: flex-start;
+    width: 100%;
+    margin-left: 0px;
+  }
 
-        @include notescreen{
-            align-self: flex-start;
-            width: 100%;
-            margin-left: 0px;
+  @include tabletscreen {
+    order: 3;
+    width: 30%;
+    max-width: 530px;
+  }
+}
 
-        }
+.aside__motivation__slogan {
+  width: 70%;
+  margin: 25px auto 5px auto;
+  display: flex;
+}
 
-        @include tabletscreen{
-            order: 3;
-            width: 30%;
-            max-width: 530px;
-        }
+.aside__motivation__slogan h2 {
+  margin: auto;
+  text-align: center;
+}
 
-    }
+.aside__motivation__detail {
+  margin: 15px auto 5px auto;
+  display: flex;
+}
 
-        .aside__motivation__slogan{
-            width: 70%;
-            margin : 25px auto 5px auto;
-            display: flex;
+.aside__motivation__detail p {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1em;
+}
 
-        }
+.aside__motivation__button {
+  width: 100%;
+  margin: 25px auto 50px auto;
+  text-align: center;
 
-        .aside__motivation__slogan h2{
-            margin: auto;
-            text-align: center;
+  @include midmobilenotescreen {
+    margin-bottom: 80px;
+  }
+  @include notescreen {
+    margin-bottom: 30px;
+  }
+}
 
-        }
+button {
+  @extend %__wouahoubouton;
+}
 
+#aside__Fonctionnement {
+  width: 90%;
+  margin: 30px auto 50px auto;
 
+  @include troppetitscreen {
+    display: none;
+  }
 
-        .aside__motivation__detail{
-            margin : 15px auto 5px auto;
-            display: flex;
+  @include midmobilenotescreen {
+    width: 50%;
+    margin: 0px;
+  }
 
-        }
+  @include notescreen {
+    width: 100%;
+    @include flexsimple(row, nowrap, flex-start, center);
+    margin: auto;
+  }
 
-        .aside__motivation__detail p{
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            font-size: 1.1em;
+  @include tabletscreen {
+    @include flexsimple(row, nowrap, flex-start, center);
+    margin-left: 25%;
+    width: 60%;
+    order: 1;
+  }
+}
+.aside__Fonctionnement__title h2 {
+  @extend %__titlepart;
 
-        }
+  @include notescreen {
+    // display: none;
+  }
+  @include tabletscreen {
+    display: none;
+  }
+}
 
-        .aside__motivation__button{
-            width: 100%;
-            margin: 25px auto 50px auto;
-            text-align: center;
+.aside__Fonctionnement__etapes {
+  width: 100%;
+  margin: auto;
 
-            @include midmobilenotescreen{
-                margin-bottom: 80px;
-            }
-            @include notescreen{
-                margin-bottom: 30px;
-            }
-        }
+  @include notescreen {
+    @include flexsimple(row, nowrap, flex-start, center);
+  }
+}
 
-            button{
-                @extend %__wouahoubouton;
-            }
-    
-    #aside__Fonctionnement{
-        width: 90%;
-        margin : 30px auto 50px auto;
+div[class*="aside__etapes__no"] {
+  @include notescreen {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  @include tabletscreen {
+    max-width: 310px;
+  }
+}
 
-        @include troppetitscreen{
-            display: none;
-    
-        }
+.aside__etapes__no1,
+.aside__etapes__no2 {
+  @include boutonetape(#fff, 1);
+}
+.aside__etapes__no3 {
+  @include boutonetape($Color_Marque_Primaire, 0.2);
+}
 
-        @include midmobilenotescreen{
-            width: 50%;
-            margin: 0px;
-        }
+.aside__etapes__number {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto 10px auto -10px;
 
+  @include tabletscreen {
+    margin-right: 0px;
+  }
+  p {
+    @extend .pucenumero;
+  }
+}
 
-        @include notescreen{
-            width: 100%;
-            @include flexsimple(row, nowrap, flex-start, center);
-            margin : auto;
-        }
+.aside__etapes__icone1 i,
+.aside__etapes__icone2 i {
+  @include coloriconawesome(rgb(128, 128, 128), 20px);
+  margin: auto 15px auto 15px;
 
-        @include tabletscreen{
-            @include flexsimple(row, nowrap, flex-start, center);
-            margin-left: 25%;
-            width: 60%;
-            order:1;
-        
-        }
-    }
-        .aside__Fonctionnement__title h2{
-            @extend %__titlepart;
-            
-            @include notescreen{
-                // display: none;
-            }
-            @include tabletscreen{
-                display: none;
-            }
+  @include notescreen {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+}
 
-        }
-    
-        .aside__Fonctionnement__etapes{
-            width: 100%;
-            margin: auto;
+.aside__etapes__icone3 i {
+  @include coloriconawesome($Color_Marque_Primaire, 20px);
+  margin: auto 15px auto 15px;
+  @include tabletscreen {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+}
 
+.aside__etapes__text p {
+  font-family: "Roboto-Bold";
+  font-weight: bolder;
 
-            @include notescreen{
-                @include flexsimple(row, nowrap, flex-start, center);
-            }
-    
-    
-        }
-
-        div[class*="aside__etapes__no"]{
-
-            @include notescreen{
-                margin-right: 20px;
-                margin-left: 20px;
-
-            }
-            @include tabletscreen{
-                max-width: 310px;
-            }
-    
-        }
-
-
-        .aside__etapes__no1, .aside__etapes__no2{
-            @include boutonetape(#fff, 1);
-        }   
-        .aside__etapes__no3{
-                @include boutonetape($Color_Marque_Primaire, 0.2);
-    
-    
-            }
-
-            .aside__etapes__number{
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                margin: auto 10px auto -10px;
-
-                @include tabletscreen{
-                    margin-right: 0px;
-                
-                }
-                    p{
-                    @extend .pucenumero;
-                    
-                }
-            }
-
-            .aside__etapes__icone1 i, .aside__etapes__icone2 i{
-                @include coloriconawesome(rgb(128, 128, 128), 20px);
-                margin: auto 15px auto 15px;
-
-                @include notescreen{
-                    margin-right: 7px;
-                    margin-left: 7px;
-                
-                }
-    
-            }
-
-
-            .aside__etapes__icone3 i{
-                @include coloriconawesome($Color_Marque_Primaire, 20px);
-                margin: auto 15px auto 15px;
-                @include tabletscreen{
-                    margin-right: 7px;
-                    margin-left: 7px;
-                
-                }
-            }
-
-            .aside__etapes__text p{
-                font-family: 'Roboto-Bold';
-                font-weight: bolder;
-
-                @include notescreen{
-                    text-align: left;
-                
-                }
-            }
-
+  @include notescreen {
+    text-align: left;
+  }
+}

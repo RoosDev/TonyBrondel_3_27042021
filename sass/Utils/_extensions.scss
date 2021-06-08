@@ -1,76 +1,85 @@
-.pucenumero{
-    color: #fff;
-    background-color: $Color_Marque_Primaire;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    border: 0px;
-    border-radius: 50px;
-    margin: auto;
-    line-height: 25px;
+.pucenumero {
+  color: #fff;
+  background-color: $Color_Marque_Primaire;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 0px;
+  border-radius: 50px;
+  margin: auto;
+  line-height: 25px;
 }
 
+.titresectionmenu {
+  border-bottom: 4px solid $Color_Marque_Tertiaire;
+  align-self: flex-start;
+  margin-left: 20px;
+  width: 50px;
 
-.titresectionmenu{
-    border-bottom: 4px solid $Color_Marque_Tertiaire;
-    align-self: flex-start;
-    margin-left: 20px;
-    width: 50px;
-
-    h3{
-        text-transform: uppercase;
-        font-family: 'Roboto';
-        font-weight: 100;
-        margin-bottom : 5px;
-    }
+  h3 {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: 100;
+    margin-bottom: 5px;
+  }
 }
 
-.heartislove{
-    width: 50px;
-    height: 100%;
+.heartislove {
+  width: 50px;
+  height: 100%;
 
-    i{
-        line-height: 100%; 
-    }
-        
-    .fa-heart{
-        font-size: 1.6em;
-        cursor: pointer;
+  i {
+    line-height: 100%;
+  }
 
-    }
+  .fa-heart {
+    font-size: 1.6em;
+    cursor: pointer;
+  }
 
-    .fas{
-        position: absolute;
-        transform-origin: center center;
-        background: linear-gradient($Color_Marque_Primaire, $Color_Marque_Secondaire );
-        -webkit-background-clip: text;
-        color: transparent;
-        transform: scale(0);
-        opacity: 0;
-        transition: all $love_kiff_transition;
-            &:hover, :focus, :active{
-                transform: scale(1);
-                opacity: 1;
-            }
-            &:hover + .far, :focus + .far, :active + .far{
-                transform: scale(0);
-                opacity: 0;
-            }
+  .fas {
+    position: absolute;
+    transform-origin: center center;
+    background: linear-gradient(
+      $Color_Marque_Primaire,
+      $Color_Marque_Secondaire
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+    opacity: 0;
+    transition: all $love_kiff_transition;
+    &:hover,
+    :focus,
+    :active {
+      transform: scale(1);
+      opacity: 1;
     }
-    
-    .far{
-        position: absolute;
-        transform-origin: center center;
-        transform: scale(0.9);
-        opacity: 1;
-        transition: all 350ms;
-        &:hover, :focus, :active{
-            transform: scale(0);
-            opacity: 0;
-        }
-        &:hover + .fas, :focus + .fas, :active + .fas{
-            transform: scale(1);
-            opacity: 1;
-        }
+    &:hover + .far,
+    :focus + .far,
+    :active + .far {
+      transform: scale(0);
+      opacity: 0;
     }
-};
+  }
+
+  .far {
+    position: absolute;
+    transform-origin: center center;
+    transform: scale(0.9);
+    opacity: 1;
+    transition: all 350ms;
+    &:hover,
+    :focus,
+    :active {
+      transform: scale(0);
+      opacity: 0;
+    }
+    &:hover + .fas,
+    :focus + .fas,
+    :active + .fas {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

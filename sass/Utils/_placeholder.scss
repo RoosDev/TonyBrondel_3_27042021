@@ -1,26 +1,26 @@
-%__wouahoubouton{
-    width: 200px;
-    height: 40px;
-    margin: auto;
-    border: 0px;
-    border-radius: 20px ;
-    color: #fff;
-    font-weight: bolder;
-    background: linear-gradient(rgba($Color_Marque_Secondaire,1), rgba($Color_Marque_Primaire,1) );
-    box-shadow: 5px 5px 10px $Color_Gris_Dark;
-    transition: all 250ms;
+%__wouahoubouton {
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  border: 0px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bolder;
+  background: linear-gradient(
+    rgba($Color_Marque_Secondaire, 1),
+    rgba($Color_Marque_Primaire, 1)
+  );
+  box-shadow: 5px 5px 10px $Color_Gris_Dark;
+  transition: all 250ms;
 
-    &:hover{
-        filter: brightness(2);
-        box-shadow: 6px 6px 7px $Color_Gris_VeryDark;
-        color: rgba(0,0,0,1);
-        cursor: pointer;
-    }
+  &:hover {
+    filter: brightness(2);
+    box-shadow: 6px 6px 7px $Color_Gris_VeryDark;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+  }
 }
 
-
-%__titlepart{
-        margin-left : 30px;
-
-    }
-
+%__titlepart {
+  margin-left: 30px;
+}

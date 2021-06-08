@@ -2,152 +2,132 @@
 /***               Le CSS de la home d'accueil                **/
 /***************************************************************/
 
-#home{
+#home {
+  #container {
+    width: 100%;
 
-    #container{
-        width: 100%;
-        
-        @include notescreen{
-            @include flexsimple(row, wrap, flex-start, flex-start);
-    
-        }
-        @include tabletscreen{
-        margin-right: auto;
-        margin-left: auto;
-        }
+    @include notescreen {
+      @include flexsimple(row, wrap, flex-start, flex-start);
     }
-    
-    main{
-        clear: both;
-        @include positionzone($Color_Gris_Superlight);
-
-        @include troppetitscreen{
-            display: none;
-        }
-
-        @include notescreen{
-            width: 100%;
-            margin-top: 300px;
-        }
-
-        @include tabletscreen{
-            margin-top: auto;
-            margin-left: 30%;
-            width: 70%;
-            max-width: 1230px;
-            background-color: transparent;
-            z-index: 15;
-
-        }
-
+    @include tabletscreen {
+      margin-right: auto;
+      margin-left: auto;
     }
-    .main__title{ 
-        @include tabletscreen{
-        margin-left: 15px;
+  }
 
-        }
+  main {
+    clear: both;
+    @include positionzone($Color_Gris_Superlight);
 
-        h2{
-            margin: 40px auto 15px 30px;
-            @extend %__titlepart;
-            
-            @include tabletscreen{
-                margin: 25px auto 15px 15px;
-        
-             }
-        }
+    @include troppetitscreen {
+      display: none;
     }
 
-    .main__global__card{
-        width: 100%;
-        @include flexsimple(row, wrap, space-between, flex-start);
-        transition: all 1s;
-
+    @include notescreen {
+      width: 100%;
+      margin-top: 300px;
     }
 
-    .main__card{
-        @include cartedimension(85%);
-        @include flexsimple(column, nowrap, flex-end, flex-start);
-        transform: scale(1);
-        transition: transform 200ms;
-
-        @include midmobilenotescreen{
-            @include cartedimension(45%);
-        }
-
-        &:hover {
-            transform: scale(1.08);
-            box-shadow: 4px 4px 5px $Color_Gris_VeryDark ;
-
-            }
-        }
-        .card__header1{
-             @include headercard(lapalettedugout);
-        }
-        .card__header2{
-            @include headercard(lanoteenchantee);
-         }
-        .card__header3{
-            @include headercard(alafrancaise);
-        }
-        .card__header4{
-            @include headercard(ledelicedessens);
-        }
-
-
-        .card__description{
-            @include descriptioncard(#fff);
-            
-            .card__description__text{
-                @include flexsimple (column, nowrap, flex-start, flex-start);
-                width: 90%;
-                height: 100%;
-
-                h4{
-                    margin: 15px 15px 0 15px;
-                }
-
-                p{
-                    margin: 5px 15px 0 15px;
-                }
-            }
-
-            .card__description__love{
-                @include flexsimple(row, nowrap, center, center);
-                @extend .heartislove;
-
-            }
-
-
-        }
-
-        .card__header_new{
-            width : 90px;
-            height: 30px;
-            margin-right: 15px;
-
-        
-            .Pnew1{
-                @include flagnewrestaurant(new);
-            
-            }
-
-            .Pnew2{
-                @include flagnewrestaurant(new);
-            
-            }
-
-            .Pnew3{
-                @include flagnewrestaurant(notnew);
-            
-            }
-
-            .Pnew4{
-                @include flagnewrestaurant(notnew);
-            
-            }
+    @include tabletscreen {
+      margin-top: auto;
+      margin-left: 30%;
+      width: 70%;
+      max-width: 1230px;
+      background-color: transparent;
+      z-index: 15;
+    }
+  }
+  .main__title {
+    @include tabletscreen {
+      margin-left: 15px;
     }
 
+    h2 {
+      margin: 40px auto 15px 30px;
+      @extend %__titlepart;
 
+      @include tabletscreen {
+        margin: 25px auto 15px 15px;
+      }
+    }
+  }
+
+  .main__global__card {
+    width: 100%;
+    @include flexsimple(row, wrap, space-between, flex-start);
+    transition: all 1s;
+  }
+
+  .main__card {
+    @include cartedimension(85%);
+    @include flexsimple(column, nowrap, flex-end, flex-start);
+    transform: scale(1);
+    transition: transform 200ms;
+
+    @include midmobilenotescreen {
+      @include cartedimension(45%);
+    }
+
+    &:hover {
+      transform: scale(1.08);
+      box-shadow: 4px 4px 5px $Color_Gris_VeryDark;
+    }
+  }
+  .card__header1 {
+    @include headercard(lapalettedugout);
+  }
+  .card__header2 {
+    @include headercard(lanoteenchantee);
+  }
+  .card__header3 {
+    @include headercard(alafrancaise);
+  }
+  .card__header4 {
+    @include headercard(ledelicedessens);
+  }
+
+  .card__description {
+    @include descriptioncard(#fff);
+
+    .card__description__text {
+      @include flexsimple(column, nowrap, flex-start, flex-start);
+      width: 90%;
+      height: 100%;
+
+      h4 {
+        margin: 15px 15px 0 15px;
+      }
+
+      p {
+        margin: 5px 15px 0 15px;
+      }
+    }
+
+    .card__description__love {
+      @include flexsimple(row, nowrap, center, center);
+      @extend .heartislove;
+    }
+  }
+
+  .card__header_new {
+    width: 90px;
+    height: 30px;
+    margin-right: 15px;
+
+    .Pnew1 {
+      @include flagnewrestaurant(new);
+    }
+
+    .Pnew2 {
+      @include flagnewrestaurant(new);
+    }
+
+    .Pnew3 {
+      @include flagnewrestaurant(notnew);
+    }
+
+    .Pnew4 {
+      @include flagnewrestaurant(notnew);
+    }
+  }
 }
-

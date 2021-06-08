@@ -4,9 +4,8 @@
 
 /** Mise en page du contenu de la page Menu **/
 
-#menu{
-
-  #container{
+#menu {
+  #container {
     @include flexsimple(column, nowrap, flex-start, flex-start);
     margin: 0px;
     width: 100%;
@@ -17,7 +16,6 @@
       z-index: 15;
     }
 
-
     @include notescreen {
       @include flexsimple(row, wrap, flex-start, flex-start);
       height: 100px;
@@ -27,16 +25,14 @@
       clear: both;
       @include positionzone($Color_Gris_light);
       @include flexsimple(column, nowrap, flex-start, flex-start);
-      
-      @include largescreen{
+
+      @include largescreen {
         background-color: transparent;
       }
-
     }
 
     .menu__header-- {
       width: 100%;
-
 
       &alafrancaise {
         @include headermenu(alafrancaise);
@@ -44,7 +40,7 @@
         @include troppetitscreen {
           display: none;
         }
-    
+
         @include largescreen {
           display: none;
         }
@@ -68,53 +64,49 @@
         }
 
         @include largescreen {
-            display: none;
-
-          }
+          display: none;
+        }
       }
       &ledelicedessens {
         @include headermenu(ledelicedessens);
-       
+
         @include troppetitscreen {
           display: none;
         }
-    
+
         @include largescreen {
           display: none;
         }
       }
-
     }
-    .menu__contain{
+    .menu__contain {
       @include flexsimple(column, nowrap, center, center);
       @include positionzone($Color_Gris_light);
-      margin : -50px auto 50px auto;
+      margin: -50px auto 50px auto;
       border: 0px;
       border-radius: 40px 40px 0 0;
       z-index: 11;
-      
+
       @include troppetitscreen {
         display: none;
       }
-  
+
       @include midmobilenotescreen {
         margin-bottom: 40px;
         background-color: rgba($Color_Gris_light, 0.8);
       }
 
-      @include tabletscreen{
-        max-width: 1024px;  
-    
+      @include tabletscreen {
+        max-width: 1024px;
       }
 
-      @include largescreen{
+      @include largescreen {
         position: relative;
         max-width: none;
         width: 75%;
-        margin : 50px auto 50px auto;
+        margin: 50px auto 50px auto;
         background-color: rgba($Color_Gris_light, 0.5);
         border-radius: 40px 40px 40px 40px;
-
       }
 
       .resto__title {
@@ -139,12 +131,11 @@
     .resto__group__section {
       @include flexsimple(column, nowrap, flex-start, flex-start);
       width: 100%;
-      margin : 0 auto auto auto;
+      margin: 0 auto auto auto;
 
       @include midmobilenotescreen {
         @include flexsimple(row, wrap, center, flex-start);
       }
-
 
       section {
         @include flexsimple(column, wrap, center, center);
@@ -153,7 +144,7 @@
         @include midmobilenotescreen {
           width: 50%;
         }
-        @include largescreen{
+        @include largescreen {
           width: 30%;
           margin-bottom: 50px;
         }
@@ -191,17 +182,15 @@
         animation-iteration-count: $articlemenu-nb_de_tour;
         animation-timing-function: linear;
         @for $i from 1 through 15 {
-            &[class="article--#{$i}"]{
-                animation-delay: $articlemenu-delay * $i;
-            }
+          &[class="article--#{$i}"] {
+            animation-delay: $articlemenu-delay * $i;
+          }
 
-            @include midmobilenotescreen{
-                width: 100%;
-            }
-        
+          @include midmobilenotescreen {
+            width: 100%;
+          }
         }
         /* fin de la partie animation  */
-
 
         &:hover {
           .article__texte {
@@ -250,7 +239,6 @@
 
             /**   les éléments pour l'animation**/
             transition: width $articlevalider-duree;
-
           }
           &price {
             @include flexsimple(column, nowrap, flex-end, flex-end);
@@ -307,7 +295,7 @@
         margin: 10px auto 10px auto;
       }
 
-      @include largescreen{
+      @include largescreen {
         margin-top: 50px;
       }
     }
@@ -328,5 +316,3 @@
 .ledelicedessens {
   @include backgroundmenulaptop(ledelicedessens);
 }
-
-

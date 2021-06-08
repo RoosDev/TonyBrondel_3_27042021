@@ -1,26 +1,23 @@
-
 /* Mise en forme de l'architecture globale*/
-body{
-    @include flexsimple(column, nowrap, flex-start, flex-start);
-    margin: 0px;
-    width: 100%;
+body {
+  @include flexsimple(column, nowrap, flex-start, flex-start);
+  margin: 0px;
+  width: 100%;
 }
-
 
 /**    Mise en forme de la résolution trop petite **/
 
+#resolutiontroppetite {
+  display: none;
 
-#resolutiontroppetite{
-    display: none;
+  @include troppetitscreen {
+    display: inline-block;
+  }
 
-    @include troppetitscreen{
-        display: inline-block;
+  h2 {
+    @include troppetitscreen {
+      font-size: 1em;
+      text-align: center;
     }
-
-    h2{
-        @include troppetitscreen{
-            font-size: 1.0em;
-            text-align: center;
-        }
-    }
+  }
 }

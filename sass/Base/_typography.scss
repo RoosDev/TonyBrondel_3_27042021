@@ -1,102 +1,86 @@
 /*  Déclaration des Polices */
 
 @font-face {
-    font-family: 'Roboto-Medium';
-    src: url('../fonts/Roboto/Roboto-Medium.ttf');
-    font-weight: normal;
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto/Roboto-Regular.ttf');
-    font-weight: normal;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Roboto-Bold';
-    src: url('../fonts/Roboto/Roboto-Bold.ttf');
-    font-weight: 900;
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 900;
 }
 
-
-
-
 @font-face {
-    font-family: 'Shrikhand';
-    src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
-    font-weight: bold;
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
+  font-weight: bold;
 }
 
 /* Style globaux  */
 
-*{
-    font-family: 'Roboto','Lucida Regular', Verdana, sans-serif;
-    color: $Color_Marque;
+* {
+  font-family: "Roboto", "Lucida Regular", Verdana, sans-serif;
+  color: $Color_Marque;
 }
 
-p{
-	font-size: 0.9em;
-    text-align: justify;
-    text-overflow: ellipsis;
+p {
+  font-size: 0.9em;
+  text-align: justify;
+  text-overflow: ellipsis;
 }
-
 
 /******  Mise en forme du H1 c'est le titre du site ******/
 
-h1{ 
-    font-family: 'Shrikhand';
-    font-size: 1.6em;
-    
+h1 {
+  font-family: "Shrikhand";
+  font-size: 1.6em;
 }
-
-
 
 /******  Mise en forme du H2 c'est le titre du site ******/
 
-
-h2{
-    font-family: 'Roboto-Bold';
-    font-size: 1.4em;
-
+h2 {
+  font-family: "Roboto-Bold";
+  font-size: 1.4em;
 }
-
 
 /******  Mise en forme du H3 dans une box aside fond gris foncé et tout en majuscule ******/
 
-h3{
-    font-family: 'Roboto-Medium';
-    font-size: 1.1em;
+h3 {
+  font-family: "Roboto-Medium";
+  font-size: 1.1em;
 }
 
 /******  Mise en forme du H4 dans une block - fond orange clair ******/
 
-h4{
-    font-family: 'Roboto-Medium';
-    font-weight: 900;
-    font-size: 1.0em;
+h4 {
+  font-family: "Roboto-Medium";
+  font-weight: 900;
+  font-size: 1em;
 }
 
 /******  Mise en forme du H5 roboto regular  ******/
 
-
-h5{
-    font-size: 1.1em;
+h5 {
+  font-size: 1.1em;
 }
-
 
 /******  Mise en forme des liens ******/
 
+a {
+  color: $Color_Marque;
+  text-decoration: none;
+  margin: auto;
 
-a{
+  &:hover {
     color: $Color_Marque;
     text-decoration: none;
-    margin: auto;
-
-    &:hover{
-        color: $Color_Marque;
-        text-decoration: none;
-    }
-
+  }
 }
-
-

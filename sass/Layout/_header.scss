@@ -1,71 +1,60 @@
-
 /***************************************************************/
 /***                        Le CSS du header                  **/
 /***************************************************************/
 
-header{
-    clear: both;
-    @include positionzone(#fff);
-    @include flexsimple(row, nowrap, space-between, center);
-    box-shadow: 0px 3px 5px $Color_Gris_Dark;
-    z-index: 10;
+header {
+  clear: both;
+  @include positionzone(#fff);
+  @include flexsimple(row, nowrap, space-between, center);
+  box-shadow: 0px 3px 5px $Color_Gris_Dark;
+  z-index: 10;
 
-    @include notescreen{
-        height: 100px;
-
-    }
-
+  @include notescreen {
+    height: 100px;
+  }
 }
 
-    #header__retour{
-        position: absolute;
-        display: none;
-        z-index: 10;
-        
-        a i{
-            margin : -5px auto auto 20px;
-            font-size: 1.3em;
-            font-weight: bold;
-            color: $Color_Gris_VeryDark;
-            z-index: 11;
-        }
+#header__retour {
+  position: absolute;
+  display: none;
+  z-index: 10;
+
+  a i {
+    margin: -5px auto auto 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: $Color_Gris_VeryDark;
+    z-index: 11;
+  }
+}
+
+#header__logo {
+  width: 100%;
+  display: flex;
+  margin: 0px;
+  background-color: #fff;
+  z-index: 10;
+
+  @include notescreen {
+    width: 100%;
+    min-width: 120px;
+    margin: auto;
+    margin-left: 50px;
+  }
+
+  @include tabletscreen {
+    width: 25%;
+    max-width: 215px;
+  }
+
+  img {
+    width: 50%;
+    margin: 10px auto 10px auto;
+    z-index: 10;
+    transition: all 1s;
+
+    @include tabletscreen {
+      width: 100%;
     }
-
-    #header__logo{
-        width: 100%;
-        display: flex;
-        margin : 0px;
-        background-color: #fff;
-        z-index: 10;
-
-        @include notescreen{
-            width: 100%;
-            min-width: 120px;
-            margin: auto;
-            margin-left: 50px;
-        }
-
-        @include tabletscreen{
-            width: 25%;
-            max-width: 215px;
-            
-
-        }
-
-        img{
-            width: 50%;
-            margin: 10px auto 10px auto;
-            z-index: 10;
-            transition: all 1s;
-
-            @include tabletscreen{
-            width: 100%;
-            }
-
-        }
-
-
-            
-        }
-
-
+  }
+}
